@@ -43,4 +43,14 @@ for ltxt in res_json['items'][0]:
 		i = alp.Item(**iDict);
 		items.append(i);
 
+for ltxt in res_json['items'][1]:
+	if len(ltxt) > 0:
+		txt = ltxt[0][0];
+		rtxt = ltxt[1][0];
+
+		iDict = dict(title = (txt + ' \t\t ' + rtxt) ,subtitle = ('Search Naver Jpdic for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
+		i = alp.Item(**iDict);
+		items.append(i);
+
+
 alp.feedback(items);
