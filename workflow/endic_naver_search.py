@@ -27,8 +27,6 @@ if len(alp.args()) > 0:
 	i = alp.Item(**iDict);
 	items.append(i);
 
-chk = bool(re.match('[a-zA-Z]+', str));
-
 res = alp.Request('http://ac.endic.naver.com/ac?q_enc=utf-8&st=11001&r_format=json&r_enc=utf-8&r_lt=10001&r_unicode=0&r_escape=1&q=' + str);
 res.download();
 
@@ -39,7 +37,7 @@ for ltxt in res_json['items'][0]:
 		txt = ltxt[0][0];
 		rtxt = ltxt[1][0];
 
-		iDict = dict(title = (txt + ' \t\t ' + rtxt) ,subtitle = ('Search Naver Endic for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
+		iDict = dict(title = (txt + u'      ' + rtxt) ,subtitle = ('Search Naver Endic for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
 		i = alp.Item(**iDict);
 		items.append(i);
 

@@ -17,6 +17,7 @@
 
 import alp;
 import re;
+import cgi;
 
 items = [];
 str = '';
@@ -27,30 +28,20 @@ if len(alp.args()) > 0:
 	i = alp.Item(**iDict);
 	items.append(i);
 
-chk = bool(re.match('[a-zA-Z]+', str));
-
 res = alp.Request('http://jpdic.naver.com/ac?st=111&r_lt=111&n_kojpdic=1&q=' + str);
 res.download();
 
 res_json = res.request.json();
 
-for ltxt in res_json['items'][0]:
-	if len(ltxt) > 0:
-		txt = ltxt[0][0];
-		rtxt = ltxt[1][0];
 
-		iDict = dict(title = (txt + ' \t\t ' + rtxt) ,subtitle = ('Search Naver Jpdic for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
-		i = alp.Item(**iDict);
-		items.append(i);
+for item in res_json['items']:
+	for ltxt in item:
+		if len(ltxt) > 0:
+			txt = ltxt[0][0];
+			rtxt = cgi.escape(ltxt[1][0]);
 
-for ltxt in res_json['items'][1]:
-	if len(ltxt) > 0:
-		txt = ltxt[0][0];
-		rtxt = ltxt[1][0];
-
-		iDict = dict(title = (txt + ' \t\t ' + rtxt) ,subtitle = ('Search Naver Jpdic for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
-		i = alp.Item(**iDict);
-		items.append(i);
-
+			iDict = dict(title = (txt + u"     " + rtxt) ,subtitle = ('Search Naver Jpdic for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
+			i = alp.Item(**iDict);
+			items.append(i);
 
 alp.feedback(items);
