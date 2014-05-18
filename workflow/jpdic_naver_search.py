@@ -15,33 +15,54 @@
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 
-import alp;
-import re;
-import cgi;
+import sys
 
-items = [];
-str = '';
-
-if len(alp.args()) > 0:
-	str = alp.args()[0];
-	iDict = dict(title = ('Search Naver Jpdic for \'' + str + '\''), autocomplete=str, arg=str,valid='true');
-	i = alp.Item(**iDict);
-	items.append(i);
-
-res = alp.Request('http://jpdic.naver.com/ac?st=111&r_lt=111&n_kojpdic=1&q=' + str);
-res.download();
-
-res_json = res.request.json();
+from workflow import web, Workflow
 
 
-for item in res_json['items']:
-	for ltxt in item:
-		if len(ltxt) > 0:
-			txt = ltxt[0][0];
-			rtxt = cgi.escape(ltxt[1][0]);
+def get_dictionary_data(word):
+	url = 'http://jpdic.naver.com/ac'
+	params = dict(st=111, r_lt=111, n_kojpdic=111, q=word)
 
-			iDict = dict(title = (txt + u"     " + rtxt) ,subtitle = ('Search Naver Jpdic for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
-			i = alp.Item(**iDict);
-			items.append(i);
 
-alp.feedback(items);
+	r = web.get(url, params)
+	r.raise_for_status()
+	return r.json()
+
+
+def main(wf):
+	import cgi;
+
+	args = wf.args[0]
+
+	wf.add_item(title = 'Search Naver Jpdic for \'%s\'' % args, 
+				autocomplete=args, 
+				arg=args,
+				valid=True)
+
+	def wrapper():
+		return get_dictionary_data(args)
+
+	res_json = wf.cached_data("jp_%s" % args, wrapper, max_age=600)
+
+	for item in res_json['items']:
+		for ltxt in item:
+			if len(ltxt) > 0:
+				txt = ltxt[0][0];
+				rtxt = cgi.escape(ltxt[1][0]);
+
+				wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
+							subtitle = 'Search Naver Jpdic for \'%s\'' % txt, 
+							autocomplete=txt, 
+							arg=txt,
+							valid=True);
+
+	wf.send_feedback()
+				
+
+
+if __name__ == '__main__':
+	wf = Workflow()
+	sys.exit(wf.run(main))
+
+
