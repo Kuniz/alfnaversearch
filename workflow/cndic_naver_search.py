@@ -21,9 +21,17 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://jpdic.naver.com/ac'
-	params = dict(st=111, r_lt=111, n_kojpdic=111, q=word)
-
+	url = 'http://ac.cndic.naver.com/ac2'
+	params = dict(q=word,
+		_callback='',
+		q_enc='utf-8',
+		st=11,
+		r_lt='00',
+		t_koreng=1,
+		r_format='json',
+		r_enc='utf-8',
+		r_unicode=0,
+		r_escape=1)
 
 	r = web.get(url, params)
 	r.raise_for_status()
@@ -35,7 +43,7 @@ def main(wf):
 
 	args = wf.args[0]
 
-	wf.add_item(title = 'Search Naver Jpdic for \'%s\'' % args, 
+	wf.add_item(title = 'Search Naver Cndic for \'%s\'' % args, 
 				autocomplete=args, 
 				arg=args,
 				valid=True)
@@ -43,7 +51,7 @@ def main(wf):
 	def wrapper():
 		return get_dictionary_data(args)
 
-	res_json = wf.cached_data("jp_%s" % args, wrapper, max_age=600)
+	res_json = wf.cached_data("cn_%s" % args, wrapper, max_age=600)
 
 	for item in res_json['items']:
 		for ltxt in item:
@@ -52,7 +60,7 @@ def main(wf):
 				rtxt = cgi.escape(ltxt[1][0]);
 
 				wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
-							subtitle = 'Search Naver Jpdic for \'%s\'' % txt, 
+							subtitle = 'Search Naver Cndic for \'%s\'' % txt, 
 							autocomplete=txt, 
 							arg=txt,
 							valid=True);
