@@ -17,28 +17,65 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 """
 
 
-import alp;
-import json;
 
-items = [];
-str = '';
 
-if len(alp.args()) > 0:
-	str = alp.args()[0];
-	iDict = dict(title = ('Search Naver for \'' + str + '\''), autocomplete=str, arg=str,valid='true');
-	i = alp.Item(**iDict);
-	items.append(i);
+import sys
 
-res = alp.Request('http://ac.search.naver.com/nx/ac?&q_enc=UTF-8&st=100&r_format=json&r_enc=UTF-8&r_unicode=0&t_koreng=1&ans=1&run=2&rev=4&q=' + str);
-res.download();
+from workflow import web, Workflow
 
-res_json = res.request.json();
 
-for ltxt in res_json['items'][0]:
-	if len(ltxt) > 0  :
-		txt = ltxt[0];
-		iDict = dict(title = ('Search Naver for \'' + txt + '\''), autocomplete=txt, arg=txt,valid='true');
-		i = alp.Item(**iDict);
-		items.append(i);
+def get_data(word):
+	url = 'http://ac.search.naver.com/nx/ac'
 
-alp.feedback(items);
+	params = dict(q_enc='UTF-8',
+		st=100,
+		r_format='json',
+		r_enc='UTF-8',
+		r_unicode=0,
+		t_koreng=1,
+		ans=1,
+		run=2,
+		rev=4,
+		q=word
+	)
+
+	r = web.get(url, params)
+	r.raise_for_status()
+	return r.json()
+
+
+
+def main(wf):
+	import cgi;
+
+	args = wf.args[0]
+
+	wf.add_item(title = 'Search Naver Endic for \'%s\'' % args, 
+				autocomplete=args, 
+				arg=args,
+				valid=True)
+
+	def wrapper():
+		return get_data(args)
+
+
+	res_json = wf.cached_data('nav_%s' % args, wrapper , max_age=30)
+
+	for ltxt in res_json['items'][0]:
+		if len(ltxt) > 0  :
+			txt = ltxt[0];
+			wf.add_item(
+				title = 'Search Naver for \'%s\'' % txt, 
+				autocomplete=txt, 
+				arg=txt,
+				valid=True);
+			
+	wf.send_feedback()
+
+				
+
+
+if __name__ == '__main__':
+	wf = Workflow()
+	sys.exit(wf.run(main))
+
