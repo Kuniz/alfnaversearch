@@ -3,7 +3,7 @@ alfnaversearch : Naver Search Workflow for Alfred
 
 Naver Search Workflow for Alfred
 
-Alfred에서 네이버 검색, 국어/영어/일본어/중국어/한자/독일어/프랑스어 사전 검색이 자동완성 되는 워크플로우
+Alfred에서 네이버 검색, 국어/영어/일본어/중국어/한자/독일어/프랑스어/이탈리아어 사전 검색이 자동완성 되는 워크플로우
 Naver is a most famous search engine in Korea.
 This workflow finds words in dictonaries of Naver dictionary and searches contents by Naver search engine. 
 You can use easily to discover Korean contents with the this Alfred workflow.
@@ -22,6 +22,7 @@ Usage
 * `nah ...` : Naver Hanja Dictionary (한자 사전)
 * `nad ...` : Naver Korean-German Dictionary (독일어 사전)
 * `naf ...` : Naver Korean-French Dictionary (프랑스어 사전)
+* `nai ...` : Naver Korean-Italian Dictionary (이탈리아어 사전)
 
 
 Externel Module
