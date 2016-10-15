@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2B52F815-CDFD-40A3-84C4-9F6387608763</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>17358C55-DEDA-46B0-924A-1B63B32DA854</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>30875AA6-9F14-4A9D-B5A9-AD3B9401027D</key>
 		<array>
 			<dict>
@@ -73,11 +86,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>79B417DB-5D88-49FE-B9E1-62893333EAAC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>712C51CB-11B1-4011-8221-ED48111E1297</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>AFE7AE5A-8A0B-4C63-BA7E-5D7163107DD5</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>AF7AE218-2503-4A6A-A896-749E084CFB84</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C906E725-412D-486E-A134-85EA2D903DA5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>427AACD3-3656-43CF-9793-9F85E433EAAC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -112,6 +151,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>E8953233-9708-4079-BF77-6135BA0AC3EF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5BCCC636-A34A-4FF8-A5ED-E9AEE0B414F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>ED7ADA66-8BF2-4877-A51A-71B5F004E305</key>
 		<array>
 			<dict>
@@ -136,6 +188,87 @@
 	<string>Naver Search</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://dedic.naver.com/#search/all/q={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>CAF33AB0-F061-4586-9047-1173CBAA6A2E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nad</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>python dedic_naver_search.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Dedic for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E0DD7A1D-529B-4804-A314-5309D341E4FB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://search.naver.com/search.naver?ie=utf8&amp;sm=stp_hty&amp;where=se&amp;query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>BC091CE6-E547-49F4-B4DF-3F4FF9FFD098</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -182,21 +315,45 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>naf</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>python frdic_naver_search.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>spaces</key>
+				<key>subtext</key>
 				<string></string>
-				<key>url</key>
-				<string>http://search.naver.com/search.naver?ie=utf8&amp;sm=stp_hty&amp;where=se&amp;query={query}</string>
-				<key>utf8</key>
+				<key>title</key>
+				<string>Search Naver Frdic for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>BC091CE6-E547-49F4-B4DF-3F4FF9FFD098</string>
+			<string>AFE7AE5A-8A0B-4C63-BA7E-5D7163107DD5</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -249,6 +406,25 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
+				<string>http://frdic.naver.com/search.nhn?query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>AF7AE218-2503-4A6A-A896-749E084CFB84</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
 				<string>http://jpdic.naver.com/search.nhn?range=all&amp;q={query}</string>
 				<key>utf8</key>
 				<true/>
@@ -263,21 +439,45 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nak</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>python krdic_naver_search.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>spaces</key>
+				<key>subtext</key>
 				<string></string>
-				<key>url</key>
-				<string>http://endic.naver.com/search.nhn?ie=utf8&amp;query={query}</string>
-				<key>utf8</key>
+				<key>title</key>
+				<string>Search Naver Korean for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>DC0C0607-B94D-4570-AC63-F66900D8201D</string>
+			<string>2944DDB4-6E49-40D2-A3D8-FF27A0C636F3</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -325,6 +525,82 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://endic.naver.com/search.nhn?ie=utf8&amp;query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>DC0C0607-B94D-4570-AC63-F66900D8201D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://krdic.naver.com/search.nhn?kind=all&amp;query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>AA99F87B-0395-40DB-B081-581E469D8B4F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://itdic.naver.com/search.nhn?query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>8DAECA93-6E9A-473D-BC1E-52559CEBC6A2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://cndic.naver.com/search.nhn?ie=utf8&amp;query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>C2B79C89-2C44-4770-8BCA-F47D25B12763</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>argumenttype</key>
@@ -368,21 +644,107 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nai</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>python itdic_naver_search.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Italian for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>30875AA6-9F14-4A9D-B5A9-AD3B9401027D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://cndic.naver.com/search.nhn?ie=utf8&amp;query={query}</string>
+				<string>http://spdic.naver.com/search.nhn?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>C2B79C89-2C44-4770-8BCA-F47D25B12763</string>
+			<string>712C51CB-11B1-4011-8221-ED48111E1297</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nas</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>python spdic_naver_search.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Spanish for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>79B417DB-5D88-49FE-B9E1-62893333EAAC</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -456,7 +818,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nad</string>
+				<string>nar</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -468,7 +830,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python dedic_naver_search.py "{query}"</string>
+				<string>python rudic_naver_search.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -476,7 +838,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Dedic for {query}</string>
+				<string>Search Naver Russian for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -485,7 +847,50 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>E0DD7A1D-529B-4804-A314-5309D341E4FB</string>
+			<string>C906E725-412D-486E-A134-85EA2D903DA5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nav</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>python vndic_naver_search.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Vietnamese for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2B52F815-CDFD-40A3-84C4-9F6387608763</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -497,14 +902,33 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://dedic.naver.com/#search/all/q={query}</string>
+				<string>http://rudic.naver.com/search.nhn?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>CAF33AB0-F061-4586-9047-1173CBAA6A2E</string>
+			<string>427AACD3-3656-43CF-9793-9F85E433EAAC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>http://vndic.naver.com/search.nhn?query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>17358C55-DEDA-46B0-924A-1B63B32DA854</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -518,7 +942,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>naf</string>
+				<string>nat</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -530,7 +954,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python frdic_naver_search.py "{query}"</string>
+				<string>python thdic_naver_search.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -538,7 +962,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Frdic for {query}</string>
+				<string>Search Naver Thai for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -547,7 +971,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>AFE7AE5A-8A0B-4C63-BA7E-5D7163107DD5</string>
+			<string>E8953233-9708-4079-BF77-6135BA0AC3EF</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -559,138 +983,14 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://frdic.naver.com/search.nhn?query={query}</string>
+				<string>http://thdic.naver.com/search.nhn?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>AF7AE218-2503-4A6A-A896-749E084CFB84</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nak</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>python krdic_naver_search.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver Korean for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>2944DDB4-6E49-40D2-A3D8-FF27A0C636F3</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>http://krdic.naver.com/search.nhn?kind=all&amp;query={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>AA99F87B-0395-40DB-B081-581E469D8B4F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nai</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>python itdic_naver_search.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver Italian for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>30875AA6-9F14-4A9D-B5A9-AD3B9401027D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>http://itdic.naver.com/search.nhn?query={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>8DAECA93-6E9A-473D-BC1E-52559CEBC6A2</string>
+			<string>5BCCC636-A34A-4FF8-A5ED-E9AEE0B414F5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -699,135 +999,191 @@
 	<string>Autocomplete Workflow for Naver Services</string>
 	<key>uidata</key>
 	<dict>
+		<key>17358C55-DEDA-46B0-924A-1B63B32DA854</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>630</integer>
+		</dict>
 		<key>2944DDB4-6E49-40D2-A3D8-FF27A0C636F3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>450</integer>
 			<key>ypos</key>
-			<integer>850</integer>
+			<integer>270</integer>
+		</dict>
+		<key>2B52F815-CDFD-40A3-84C4-9F6387608763</key>
+		<dict>
+			<key>xpos</key>
+			<integer>40</integer>
+			<key>ypos</key>
+			<integer>630</integer>
 		</dict>
 		<key>30875AA6-9F14-4A9D-B5A9-AD3B9401027D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>450</integer>
 			<key>ypos</key>
-			<integer>980</integer>
+			<integer>390</integer>
 		</dict>
 		<key>3F4FA2E1-C07E-43F6-B256-EEF240220310</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<real>130</real>
+			<integer>150</integer>
+		</dict>
+		<key>427AACD3-3656-43CF-9793-9F85E433EAAC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>650</integer>
+			<key>ypos</key>
+			<integer>630</integer>
 		</dict>
 		<key>4286DE0E-6B20-4815-BAF6-4F62F4BA107C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<real>490</real>
+			<integer>510</integer>
+		</dict>
+		<key>5BCCC636-A34A-4FF8-A5ED-E9AEE0B414F5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>750</integer>
 		</dict>
 		<key>5D8CC2B4-1E85-48E8-9063-FD9895DE9E3A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<real>130</real>
+			<integer>150</integer>
+		</dict>
+		<key>712C51CB-11B1-4011-8221-ED48111E1297</key>
+		<dict>
+			<key>xpos</key>
+			<integer>650</integer>
+			<key>ypos</key>
+			<integer>510</integer>
 		</dict>
 		<key>7381EFB0-D4A3-4994-A6B1-99D0B508233D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<real>250</real>
+			<integer>270</integer>
+		</dict>
+		<key>79B417DB-5D88-49FE-B9E1-62893333EAAC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>450</integer>
+			<key>ypos</key>
+			<integer>510</integer>
 		</dict>
 		<key>8DAECA93-6E9A-473D-BC1E-52559CEBC6A2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>650</integer>
 			<key>ypos</key>
-			<integer>980</integer>
+			<integer>390</integer>
 		</dict>
 		<key>AA99F87B-0395-40DB-B081-581E469D8B4F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>650</integer>
 			<key>ypos</key>
-			<integer>850</integer>
+			<integer>270</integer>
 		</dict>
 		<key>AF7AE218-2503-4A6A-A896-749E084CFB84</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>650</integer>
 			<key>ypos</key>
-			<real>730</real>
+			<integer>150</integer>
 		</dict>
 		<key>AFE7AE5A-8A0B-4C63-BA7E-5D7163107DD5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>450</integer>
 			<key>ypos</key>
-			<real>730</real>
+			<integer>150</integer>
 		</dict>
 		<key>BC091CE6-E547-49F4-B4DF-3F4FF9FFD098</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>30</integer>
 		</dict>
 		<key>C2B79C89-2C44-4770-8BCA-F47D25B12763</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<real>370</real>
+			<integer>390</integer>
+		</dict>
+		<key>C906E725-412D-486E-A134-85EA2D903DA5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>450</integer>
+			<key>ypos</key>
+			<integer>630</integer>
 		</dict>
 		<key>CAF33AB0-F061-4586-9047-1173CBAA6A2E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>650</integer>
 			<key>ypos</key>
-			<real>610</real>
+			<integer>30</integer>
 		</dict>
 		<key>D4063FD6-BB03-4B36-A5C7-3AD7811E115E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<real>370</real>
+			<integer>390</integer>
 		</dict>
 		<key>DC0C0607-B94D-4570-AC63-F66900D8201D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<real>250</real>
+			<integer>270</integer>
 		</dict>
 		<key>E0DD7A1D-529B-4804-A314-5309D341E4FB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>450</integer>
 			<key>ypos</key>
-			<real>610</real>
+			<integer>30</integer>
+		</dict>
+		<key>E8953233-9708-4079-BF77-6135BA0AC3EF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>40</integer>
+			<key>ypos</key>
+			<integer>750</integer>
 		</dict>
 		<key>ED7ADA66-8BF2-4877-A51A-71B5F004E305</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>30</integer>
 		</dict>
 		<key>FB49BC51-DA24-451E-AE0B-904499ACFB27</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<real>490</real>
+			<integer>510</integer>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>0.0.7</string>
+	<string>0.0.8</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
