@@ -52,7 +52,7 @@ def main(wf):
 				rtxt = cgi.escape(ltxt[1][0]);
 
 				wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
-							subtitle = 'Search Ruver Spdic for \'%s\'' % txt, 
+							subtitle = 'Search Naver Spdic for \'%s\'' % txt, 
 							autocomplete=txt, 
 							arg=txt,
 							valid=True);
