@@ -21,7 +21,7 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://ac.dic.naver.net/rudic/ac'
+	url = 'http://ac.dic.naver.net/iddic/ac'
 	params = dict(st=111, r_lt=111, n_kospdic=111, q=word)
 
 
@@ -35,7 +35,7 @@ def main(wf):
 
 	args = wf.args[0]
 
-	wf.add_item(title = 'Search Naver Rudic for \'%s\'' % args, 
+	wf.add_item(title = 'Search Naver Iddic for \'%s\'' % args, 
 				autocomplete=args, 
 				arg=args,
 				valid=True)
@@ -52,7 +52,7 @@ def main(wf):
 				rtxt = cgi.escape(ltxt[1][0]);
 
 				wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
-							subtitle = 'Search Naver Spdic for \'%s\'' % txt, 
+							subtitle = 'Search Naver Iddic for \'%s\'' % txt, 
 							autocomplete=txt, 
 							arg=txt,
 							valid=True);
