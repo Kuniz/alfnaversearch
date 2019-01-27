@@ -50,7 +50,7 @@ def main(wf):
 
 	args = wf.args[0]
 
-	wf.add_item(title = 'Search Naver Endic for \'%s\'' % args, 
+	wf.add_item(title = 'Search Naver for \'%s\'' % args, 
 				autocomplete=args, 
 				arg=args,
 				valid=True)
