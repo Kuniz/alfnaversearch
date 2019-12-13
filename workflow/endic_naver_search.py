@@ -22,7 +22,7 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://ac.endic.naver.com/ac'
+	url = 'https://ac.dict.naver.com/enendict/ac'
 	params = dict(q_enc = 'utf-8',
 		    	st = 11001,
 		    	r_format = 'json',
