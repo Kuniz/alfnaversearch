@@ -21,7 +21,7 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://ac.spdic.naver.com/ac'
+	url = 'https://ac.dict.naver.com/spdic/ac'
 	params = dict(st=111, r_lt=111, n_kospdic=111, q=word)
 
 
