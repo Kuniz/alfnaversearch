@@ -21,7 +21,7 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://ac.dic.naver.net/dedic/ac'
+	url = 'https://ac-dict.naver.com/deko/ac'
 	params = dict(
 		_callback="",
 		st="11",
@@ -53,7 +53,7 @@ def main(wf):
 		for ltxt in item:
 			if len(ltxt) > 0:
 				txt = ltxt[0][0];
-				rtxt = cgi.escape(ltxt[1][0]);
+				rtxt = cgi.escape(ltxt[3][0]);
 
 				wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
 							subtitle = 'Search Naver Dedic for \'%s\'' % txt, 

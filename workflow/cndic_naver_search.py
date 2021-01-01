@@ -21,7 +21,7 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://ac.dic.naver.net/cndic/ac'
+	url = 'https://ac-dict.naver.com/zhko/ac'
 	params = dict(q=word,
 		_callback='',
 		q_enc='UTF-8',
@@ -53,29 +53,16 @@ def main(wf):
 	for item in res_json['items']:
 		for ltxt in item:
 			if len(ltxt) > 0:
-				cType = int(ltxt[0][0])
-
-				if cType == 1:
-					txt = ltxt[6][0]
-					rtxt = "(%s, %s)[%s] %s" % \
-						(cgi.escape(ltxt[1][0]), cgi.escape(ltxt[2][0]), cgi.escape(ltxt[3][0]), cgi.escape(ltxt[5][0]))
-				
-				elif cType == 2:
-					txt = ltxt[1][0]
-					rtxt = "(%s) %s" % (cgi.escape(ltxt[1][0]), cgi.escape(ltxt[2][0]))
-
-				else:
-					txt = cgi.escape(ltxt[1][0])
-					rtxt = ''
+				txt = ltxt[0][0]
+				rtxt = cgi.escape(ltxt[3][0])
 
 				wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
-							subtitle = 'Search Naver Cndic for \'%s\'' % txt, 
-							autocomplete=txt, 
+							subtitle = 'Search Naver Cndic for \'%s\'' % txt,
+							autocomplete=txt,
 							arg=txt,
 							valid=True)
 
 	wf.send_feedback()
-				
 
 
 if __name__ == '__main__':

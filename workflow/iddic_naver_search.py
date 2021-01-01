@@ -21,7 +21,7 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://ac.dic.naver.net/iddic/ac'
+	url = 'https://ac-dict.naver.com/idko/ac'
 	params = dict(st=111, r_lt=111, n_kospdic=111, q=word)
 
 
@@ -49,7 +49,7 @@ def main(wf):
 		for ltxt in item:
 			if len(ltxt) > 0:
 				txt = ltxt[0][0];
-				rtxt = cgi.escape(ltxt[1][0]);
+				rtxt = cgi.escape(ltxt[3][0]);
 
 				wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
 							subtitle = 'Search Naver Iddic for \'%s\'' % txt, 
