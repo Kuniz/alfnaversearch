@@ -21,7 +21,7 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'http://ac.dic.naver.net/krdic/ac'
+	url = 'https://ac-dict.naver.com/koko/ac'
 	params = dict(frm='stdkrdic', oe='utf8', m=0, r=1, st=111, r_lt=111, q=word)
 
 	r = web.get(url, params)
@@ -46,7 +46,8 @@ def main(wf):
 
 	for items in res_json['items']:
 		for ltxt in items:
-			for txt in ltxt:
+			if len(ltxt) > 0:
+				txt = ltxt[0][0]
 				wf.add_item(title = u"%s" % txt ,
 							subtitle = 'Search Naver Krdic for \'%s\'' % txt, 
 							autocomplete=txt, 
