@@ -164,6 +164,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4CE6D24F-8B0E-4DEE-B0B3-22CDA12434C8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>74EA9379-B5A0-4226-BE3E-A5078579509A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4D057C63-9417-40FC-8236-01FAE5092837</key>
 		<array>
 			<dict>
@@ -1609,14 +1622,14 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://dict.naver.com/arkodict/#/search?query={query}</string>
+				<string>https://dict.naver.com/cskodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>FD676DF5-C5CE-4819-826B-20137D54E219</string>
+			<string>6A00B3D8-1D59-494A-98F9-2967E2BD35AA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1628,14 +1641,14 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://dict.naver.com/cskodict/#/search?query={query}</string>
+				<string>https://dict.naver.com/arkodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>6A00B3D8-1D59-494A-98F9-2967E2BD35AA</string>
+			<string>FD676DF5-C5CE-4819-826B-20137D54E219</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1963,6 +1976,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://dict.naver.com/lakodict/#/search?query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>BBE5B9E6-EE86-4174-9C19-A222A6002685</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -2025,25 +2057,6 @@
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>FB49BC51-DA24-451E-AE0B-904499ACFB27</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://dict.naver.com/lakodict/#/search?query={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>BBE5B9E6-EE86-4174-9C19-A222A6002685</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2980,6 +2993,25 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
+				<string>https://search.shopping.naver.com/search/all?query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>74EA9379-B5A0-4226-BE3E-A5078579509A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
 				<string>https://dict.naver.com/nekodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
@@ -3028,6 +3060,55 @@
 			<string>4F40ABC4-E07D-4878-BDDE-6FEA94EF3987</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ns</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Running</string>
+				<key>script</key>
+				<string>python naver_shopping.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4CE6D24F-8B0E-4DEE-B0B3-22CDA12434C8</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3263,6 +3344,13 @@
 			<key>ypos</key>
 			<integer>510</integer>
 		</dict>
+		<key>4CE6D24F-8B0E-4DEE-B0B3-22CDA12434C8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1635</integer>
+			<key>ypos</key>
+			<integer>875</integer>
+		</dict>
 		<key>4D057C63-9417-40FC-8236-01FAE5092837</key>
 		<dict>
 			<key>xpos</key>
@@ -3367,6 +3455,13 @@
 			<integer>40</integer>
 			<key>ypos</key>
 			<integer>270</integer>
+		</dict>
+		<key>74EA9379-B5A0-4226-BE3E-A5078579509A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1835</integer>
+			<key>ypos</key>
+			<integer>875</integer>
 		</dict>
 		<key>79B417DB-5D88-49FE-B9E1-62893333EAAC</key>
 		<dict>
@@ -3638,7 +3733,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.1.1</string>
 	<key>webaddress</key>
 	<string>https://www.jinukbaek.com/blog/ko/archives/216</string>
 </dict>
