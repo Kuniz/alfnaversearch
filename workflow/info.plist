@@ -554,7 +554,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py sv "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc sv "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -627,7 +627,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>68</integer>
 				<key>keyword</key>
 				<string>na</string>
 				<key>queuedelaycustom</key>
@@ -641,7 +641,7 @@
 				<key>runningsubtext</key>
 				<string>Running</string>
 				<key>script</key>
-				<string>python naver_search.py "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc ja "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -709,7 +709,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py mn "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc mn "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -777,7 +777,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py de "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc de "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -826,7 +826,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py fi "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc fi "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -894,7 +894,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py my "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc my "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -943,7 +943,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py hu "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc hu "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -992,7 +992,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py uk "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc uk "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1098,7 +1098,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py ja "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc ja "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1185,7 +1185,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py fr "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc fr "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1234,7 +1234,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py ka "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc ka "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1283,7 +1283,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python endic_naver_search.py "{query}"</string>
+				<string>/usr/bin/python endic_naver_search.pyc "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1351,7 +1351,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py sq "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc sq "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1438,7 +1438,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py sw "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc sw "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1487,7 +1487,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python krdic_naver_search.py "{query}"</string>
+				<string>/usr/bin/python krdic_naver_search.pyc "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1574,7 +1574,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py it "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc it "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1699,7 +1699,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py cs "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc cs "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1748,7 +1748,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py ro "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc ro "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1797,7 +1797,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py zh "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc zh "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1846,7 +1846,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py ar "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc ar "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1933,7 +1933,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py km "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc km "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2020,7 +2020,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py hr "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc hr "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2088,7 +2088,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python hanja_naver_search.py "{query}"</string>
+				<string>/usr/bin/python hanja_naver_search.pyc "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2137,7 +2137,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py la "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc la "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2205,7 +2205,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py es "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc es "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2273,7 +2273,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py el "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc el "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2322,7 +2322,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py tr "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc tr "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2428,7 +2428,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py fa "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc fa "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2477,7 +2477,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py ru "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc ru "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2545,7 +2545,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py vi "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc vi "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2594,7 +2594,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py th "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc th "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2643,7 +2643,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py id "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc id "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2692,7 +2692,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py pt "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc pt "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2798,7 +2798,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py hi "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc hi "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2866,7 +2866,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py nl "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc nl "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2915,7 +2915,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py pl "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc pl "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2964,7 +2964,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py ne "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc ne "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3089,7 +3089,7 @@
 				<key>runningsubtext</key>
 				<string>Running</string>
 				<key>script</key>
-				<string>python naver_shopping.py "{query}"</string>
+				<string>/usr/bin/python naver_shopping.pyc "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3157,7 +3157,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>python common_naver_search.py uz "{query}"</string>
+				<string>/usr/bin/python common_naver_search.pyc uz "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3733,7 +3733,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.1</string>
+	<string>0.1.2</string>
 	<key>webaddress</key>
 	<string>https://www.jinukbaek.com/blog/ko/archives/216</string>
 </dict>
