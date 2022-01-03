@@ -26,11 +26,9 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-    url = 'https://ac-dict.naver.com/hanja/ac'
-    params = dict(q_enc='utf-8',
-                  st=111,
-                  r_format='json',
-                  r_enc='utf-8',
+    url = 'https://ac-dict.naver.com/ccko/ac'
+    params = dict(st=11,
+                  r_lt=11,
                   q=word)
 
     r = web.get(url, params)
@@ -58,8 +56,9 @@ def main(wf):
             if len(ltxt) > 0:
                 txt = ltxt[0][0]
                 rtxt = cgi.escape(ltxt[1][0])
+                r2txt = cgi.escape(ltxt[3][0])
 
-                wf.add_item(title=u"%s     %s" % (txt, rtxt),
+                wf.add_item(title=u"%s[%s] %s" % (txt, rtxt, r2txt),
                             subtitle='Search Naver Hanja for \'%s\'' % txt,
                             autocomplete=txt,
                             arg=txt,
