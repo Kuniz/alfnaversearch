@@ -21,66 +21,56 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-
-
-
 import sys
 
 from workflow import web, Workflow
 
 
 def get_data(word):
-	url = 'http://ac.search.naver.com/nx/ac'
+    url = 'http://ac.search.naver.com/nx/ac'
 
-	params = dict(q_enc='UTF-8',
-		st=100,
-		r_format='json',
-		r_enc='UTF-8',
-		r_unicode=0,
-		t_koreng=1,
-		ans=1,
-		run=2,
-		rev=4,
-		q=word
-	)
+    params = dict(q_enc='UTF-8',
+                  st=100,
+                  r_format='json',
+                  r_enc='UTF-8',
+                  r_unicode=0,
+                  t_koreng=1,
+                  ans=1,
+                  run=2,
+                  rev=4,
+                  q=word
+                  )
 
-	r = web.get(url, params)
-	r.raise_for_status()
-	return r.json()
-
+    r = web.get(url, params)
+    r.raise_for_status()
+    return r.json()
 
 
 def main(wf):
-	import cgi;
+    args = wf.args[0]
 
-	args = wf.args[0]
+    wf.add_item(title='Search Naver for \'%s\'' % args,
+                autocomplete=args,
+                arg=args,
+                valid=True)
 
-	wf.add_item(title = 'Search Naver for \'%s\'' % args,
-				autocomplete=args,
-				arg=args,
-				valid=True)
+    def wrapper():
+        return get_data(args)
 
-	def wrapper():
-		return get_data(args)
+    res_json = wf.cached_data('nav_%s' % args, wrapper, max_age=30)
 
+    for ltxt in res_json['items'][0]:
+        if len(ltxt) > 0:
+            txt = ltxt[0]
+            wf.add_item(
+                title='Search Naver for \'%s\'' % txt,
+                autocomplete=txt,
+                arg=txt,
+                valid=True)
 
-	res_json = wf.cached_data('nav_%s' % args, wrapper , max_age=30)
-
-	for ltxt in res_json['items'][0]:
-		if len(ltxt) > 0  :
-			txt = ltxt[0];
-			wf.add_item(
-				title = 'Search Naver for \'%s\'' % txt,
-				autocomplete=txt,
-				arg=txt,
-				valid=True);
-
-	wf.send_feedback()
-
-
+    wf.send_feedback()
 
 
 if __name__ == '__main__':
-	wf = Workflow()
-	sys.exit(wf.run(main))
-
+    wf = Workflow()
+    sys.exit(wf.run(main))

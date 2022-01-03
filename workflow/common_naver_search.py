@@ -41,7 +41,7 @@ def get_dictionary_data(lang, word):
 
 
 def main(wf):
-    import cgi;
+    import cgi
 
     lang = wf.args[0]
     word = wf.args[1]

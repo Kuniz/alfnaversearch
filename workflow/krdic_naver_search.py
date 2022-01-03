@@ -26,43 +26,40 @@ from workflow import web, Workflow
 
 
 def get_dictionary_data(word):
-	url = 'https://ac-dict.naver.com/koko/ac'
-	params = dict(frm='stdkrdic', oe='utf8', m=0, r=1, st=111, r_lt=111, q=word)
+    url = 'https://ac-dict.naver.com/koko/ac'
+    params = dict(frm='stdkrdic', oe='utf8', m=0, r=1, st=111, r_lt=111, q=word)
 
-	r = web.get(url, params)
-	r.raise_for_status()
-	return r.json()
+    r = web.get(url, params)
+    r.raise_for_status()
+    return r.json()
 
 
 def main(wf):
-	import cgi;
+    args = wf.args[0]
 
-	args = wf.args[0]
+    wf.add_item(title='Search Naver Krdic for \'%s\'' % args,
+                autocomplete=args,
+                arg=args,
+                valid=True)
 
-	wf.add_item(title = 'Search Naver Krdic for \'%s\'' % args,
-				autocomplete=args,
-				arg=args,
-				valid=True)
+    def wrapper():
+        return get_dictionary_data(args)
 
-	def wrapper():
-		return get_dictionary_data(args)
+    res_json = wf.cached_data("kr_%s" % args, wrapper, max_age=600)
 
-	res_json = wf.cached_data("kr_%s" % args, wrapper, max_age=600)
+    for items in res_json['items']:
+        for ltxt in items:
+            if len(ltxt) > 0:
+                txt = ltxt[0][0]
+                wf.add_item(title=u"%s" % txt,
+                            subtitle='Search Naver Krdic for \'%s\'' % txt,
+                            autocomplete=txt,
+                            arg=txt,
+                            valid=True)
 
-	for items in res_json['items']:
-		for ltxt in items:
-			if len(ltxt) > 0:
-				txt = ltxt[0][0]
-				wf.add_item(title = u"%s" % txt ,
-							subtitle = 'Search Naver Krdic for \'%s\'' % txt,
-							autocomplete=txt,
-							arg=txt,
-							valid=True);
-
-	wf.send_feedback()
-
+    wf.send_feedback()
 
 
 if __name__ == '__main__':
-	wf = Workflow()
-	sys.exit(wf.run(main))
+    wf = Workflow()
+    sys.exit(wf.run(main))

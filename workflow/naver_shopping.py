@@ -27,55 +27,50 @@ from workflow import web, Workflow
 
 
 def get_data(word):
-	url = 'https://ac.shopping.naver.com/ac'
+    url = 'https://ac.shopping.naver.com/ac'
 
-	params = dict(
-		frm='shopping',
-		q_enc='UTF-8',
-		st=111111,
-		r_lt=111111,
-		r_format='json',
-		r_enc='UTF-8',
-		r_unicode=0,
-		t_koreng=1,
-		q=word
-	)
+    params = dict(
+        frm='shopping',
+        q_enc='UTF-8',
+        st=111111,
+        r_lt=111111,
+        r_format='json',
+        r_enc='UTF-8',
+        r_unicode=0,
+        t_koreng=1,
+        q=word
+    )
 
-	r = web.get(url, params)
-	r.raise_for_status()
-	return r.json()
-
+    r = web.get(url, params)
+    r.raise_for_status()
+    return r.json()
 
 
 def main(wf):
-	import cgi;
+    args = wf.args[0]
 
-	args = wf.args[0]
+    wf.add_item(title='Search Naver Shopping for \'%s\'' % args,
+                autocomplete=args,
+                arg=args,
+                valid=True)
 
-	wf.add_item(title = 'Search Naver Shopping for \'%s\'' % args,
-				autocomplete=args,
-				arg=args,
-				valid=True)
+    def wrapper():
+        return get_data(args)
 
-	def wrapper():
-		return get_data(args)
+    res_json = wf.cached_data('navs_%s' % args, wrapper, max_age=30)
 
+    for ltxt in res_json['items'][1]:
+        if len(ltxt) > 0:
+            txt = ltxt[0][0]
+            wf.add_item(
+                title=txt,
+                autocomplete=txt,
+                arg=txt,
+                valid=True)
 
-	res_json = wf.cached_data('navs_%s' % args, wrapper , max_age=30)
-
-	for ltxt in res_json['items'][1]:
-		if len(ltxt) > 0  :
-			txt = ltxt[0][0]
-			wf.add_item(
-				title = txt,
-				autocomplete=txt,
-				arg=txt,
-				valid=True)
-
-	wf.send_feedback()
+    wf.send_feedback()
 
 
 if __name__ == '__main__':
-	wf = Workflow()
-	sys.exit(wf.run(main))
-
+    wf = Workflow()
+    sys.exit(wf.run(main))
