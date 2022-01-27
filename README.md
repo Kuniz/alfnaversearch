@@ -18,6 +18,7 @@ Usage
 * `ns ...`  : Naver Shopping(네이버 쇼핑 검색)
 * `nak ...` : Naver Korean Dictionary (국어 사전)
 * `nae ...` : Naver Korean-English Dictionary (영어 사전)
+* `naee ...` : Naver English-English Dictionary (영영 사전)
 * `naj ...` : Naver Korean-Japanese Dictionary (일본어 사전)
 * `nac ...` : Naver Korean-Chinese Dictionary (중국어 사전)
 * `nah ...` : Naver Hanja Dictionary (한자 사전)

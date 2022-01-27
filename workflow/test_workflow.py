@@ -6,6 +6,7 @@ import naver_shopping
 import krdic_naver_search
 import hanja_naver_search
 import endic_naver_search
+import enendic_naver_search
 import common_naver_search
 
 
@@ -32,6 +33,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_endic(self):
         res = endic_naver_search.get_dictionary_data('한글')
+
+        self.assertTrue(len(res['items']) > 0)
+
+    def test_enendic(self):
+        res = enendic_naver_search.get_dictionary_data('한글')
 
         self.assertTrue(len(res['items']) > 0)
 
