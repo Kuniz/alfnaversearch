@@ -22,8 +22,7 @@
 
 import sys
 
-from workflow import web, Workflow
-
+from workflow3 import web, Workflow
 
 def get_dictionary_data(word):
     url = 'https://ac.dict.naver.com/enendict/ac'

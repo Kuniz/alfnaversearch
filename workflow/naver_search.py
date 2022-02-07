@@ -23,7 +23,7 @@ SOFTWARE.
 
 import sys
 
-from workflow import web, Workflow
+from workflow3 import web, Workflow
 
 
 def get_data(word):

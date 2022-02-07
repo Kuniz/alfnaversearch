@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/bin/python -m compileall .
+/usr/bin/python3 -m compileall .
