@@ -37,7 +37,7 @@ def get_dictionary_data(word):
 
 
 def main(wf):
-    import cgi
+    import html
 
     args = wf.args[0]
 
@@ -55,8 +55,8 @@ def main(wf):
         for ltxt in item:
             if len(ltxt) > 0:
                 txt = ltxt[0][0]
-                rtxt = cgi.escape(ltxt[1][0])
-                r2txt = cgi.escape(ltxt[3][0])
+                rtxt = html.escape(ltxt[1][0])
+                r2txt = html.escape(ltxt[3][0])
 
                 wf.add_item(title=u"%s[%s] %s" % (txt, rtxt, r2txt),
                             subtitle='Search Naver Hanja for \'%s\'' % txt,
