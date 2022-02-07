@@ -22,7 +22,7 @@
 
 import sys
 
-from workflow import web, Workflow
+from workflow3 import web, Workflow
 
 
 def get_dictionary_data(lang, word):
@@ -41,7 +41,7 @@ def get_dictionary_data(lang, word):
 
 
 def main(wf):
-    import cgi
+    import html
 
     lang = wf.args[0]
     word = wf.args[1]
@@ -60,7 +60,7 @@ def main(wf):
         for ltxt in item:
             if len(ltxt) > 0:
                 txt = ltxt[0][0]
-                rtxt = cgi.escape(ltxt[3][0])
+                rtxt = html.escape(ltxt[3][0])
 
                 wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
                             subtitle = 'Search Naver %sdic for \'%s\'' % (lang, txt),
