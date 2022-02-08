@@ -22,7 +22,10 @@
 
 import sys
 
-from workflow import web, Workflow
+if sys.version[0] == "2":
+    from workflow import web, Workflow
+else:
+    from workflow3 import web, Workflow
 
 
 def get_dictionary_data(word):
@@ -37,7 +40,11 @@ def get_dictionary_data(word):
 
 
 def main(wf):
-    import cgi
+
+    if sys.version[0] == "2":
+        import cgi as html
+    else:
+        import html
 
     args = wf.args[0]
 
@@ -55,8 +62,8 @@ def main(wf):
         for ltxt in item:
             if len(ltxt) > 0:
                 txt = ltxt[0][0]
-                rtxt = cgi.escape(ltxt[1][0])
-                r2txt = cgi.escape(ltxt[3][0])
+                rtxt = html.escape(ltxt[1][0])
+                r2txt = html.escape(ltxt[3][0])
 
                 wf.add_item(title=u"%s[%s] %s" % (txt, rtxt, r2txt),
                             subtitle='Search Naver Hanja for \'%s\'' % txt,
