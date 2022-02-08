@@ -22,7 +22,10 @@
 
 import sys
 
-from workflow3 import web, Workflow
+if sys.version[0] == "2":
+    from workflow import web, Workflow
+else:
+    from workflow3 import web, Workflow
 
 
 def get_dictionary_data(word):
@@ -37,7 +40,11 @@ def get_dictionary_data(word):
 
 
 def main(wf):
-    import html
+
+    if sys.version[0] == "2":
+        import cgi as html
+    else:
+        import html
 
     args = wf.args[0]
 
