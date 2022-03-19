@@ -69,5 +69,3 @@ Externel Module
 LICENSE
 --------------
  - MIT
- - except for alp (by Daniel Shannon, https://github.com/phyllisstein/alp), icons < v0.0.1
- - except for alfred-workflow (by deanishe, https://github.com/deanishe/alfred-workflow, MIT License)
