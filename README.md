@@ -65,6 +65,7 @@ Externel Module
 --------------
  This workflow used alfred-workflow more than v0.0.2. Alfred-workflow can find there(https://github.com/deanishe/alfred-workflow).
  This workflow used alp(A Python Module for Alfred Workflows) module at v0.0.1. It created by Daniel Shannon. 
+ Certifi : using ssl with default urllib
 
 LICENSE
 --------------

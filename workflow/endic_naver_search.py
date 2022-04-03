@@ -21,6 +21,7 @@
 
 
 import sys
+import certifi
 
 if sys.version[0] == "2":
     from workflow import web, Workflow
