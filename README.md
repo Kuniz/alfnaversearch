@@ -65,6 +65,7 @@ Usage
 
 * Cmd + C : 상세 내용이 클립보드에 복사
 * Cmd + N, C : 자동완성 텍스트가 클립보드로 복사
+* Cmd + Y 혹은 Shift : 검색결과 미리 보기 웹브라우져 출력
 
 Externel Module
 --------------
