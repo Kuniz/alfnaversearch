@@ -61,6 +61,11 @@ Usage
 * `nael ...` : Naver Korean-Greek Dictionary (그리스어 사전)
 
 
+단축키 관련 기능 추가
+
+* Cmd + C : 상세 내용이 클립보드에 복사
+* Cmd + N, C : 자동완성 텍스트가 클립보드로 복사
+
 Externel Module
 --------------
  This workflow used alfred-workflow more than v0.0.2. Alfred-workflow can find there(https://github.com/deanishe/alfred-workflow).
