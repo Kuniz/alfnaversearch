@@ -30,7 +30,7 @@ else:
     from workflow3 import web, Workflow
 
 def get_dictionary_data(word):
-    url = 'https://ac.dict.naver.com/enen1/ac'
+    url = 'https://ac-dict.naver.com/enen3/ac'
     params = dict(st=11,
                   r_format='json',
                   r_lt=11,
