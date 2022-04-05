@@ -67,6 +67,8 @@ def main(wf):
                             subtitle='Search Naver Endic for \'%s\'' % txt,
                             autocomplete=txt,
                             arg=txt,
+                            copytext=rtxt,
+                            largetext=txt,
                             valid=True)
 
     wf.send_feedback()

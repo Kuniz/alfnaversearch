@@ -74,6 +74,8 @@ def main(wf):
                             subtitle = 'Search Naver %sdic for \'%s\'' % (lang, txt),
                             autocomplete=txt,
                             arg=txt,
+                            copytext=rtxt,
+                            largetext=txt,
                             valid=True)
 
     wf.send_feedback()

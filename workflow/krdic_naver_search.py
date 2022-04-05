@@ -59,6 +59,8 @@ def main(wf):
                             subtitle='Search Naver Krdic for \'%s\'' % txt,
                             autocomplete=txt,
                             arg=txt,
+                            copytext=txt,
+                            largetext=txt,
                             valid=True)
 
     wf.send_feedback()

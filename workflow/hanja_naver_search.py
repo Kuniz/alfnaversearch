@@ -71,6 +71,8 @@ def main(wf):
                             subtitle='Search Naver Hanja for \'%s\'' % txt,
                             autocomplete=txt,
                             arg=txt,
+                            copytext=r2txt,
+                            largetext=txt,
                             valid=True)
 
     wf.send_feedback()

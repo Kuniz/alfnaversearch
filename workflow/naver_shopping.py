@@ -71,6 +71,8 @@ def main(wf):
                 title=txt,
                 autocomplete=txt,
                 arg=txt,
+                copytext=txt,
+                largetext=txt,
                 valid=True)
 
     wf.send_feedback()
