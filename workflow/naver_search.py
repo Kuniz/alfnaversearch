@@ -57,6 +57,7 @@ def main(wf):
     wf.add_item(title='Search Naver for \'%s\'' % args,
                 autocomplete=args,
                 arg=args,
+                quicklookurl='https://search.naver.com/search.naver?ie=utf8&sm=stp_hty&where=se&query=%s' % args,
                 valid=True)
 
     def wrapper():
@@ -73,6 +74,7 @@ def main(wf):
                 arg=txt,
                 copytext=txt,
                 largetext=txt,
+                quicklookurl='https://search.naver.com/search.naver?ie=utf8&sm=stp_hty&where=se&query=%s' % txt,
                 valid=True)
 
     wf.send_feedback()

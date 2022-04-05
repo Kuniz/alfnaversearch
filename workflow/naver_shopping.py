@@ -57,6 +57,7 @@ def main(wf):
     wf.add_item(title='Search Naver Shopping for \'%s\'' % args,
                 autocomplete=args,
                 arg=args,
+                quicklookurl='https://search.shopping.naver.com/search/all?query=%s' % args,
                 valid=True)
 
     def wrapper():
@@ -73,6 +74,7 @@ def main(wf):
                 arg=txt,
                 copytext=txt,
                 largetext=txt,
+                quicklookurl='https://search.shopping.naver.com/search/all?query=%s' % txt,
                 valid=True)
 
     wf.send_feedback()

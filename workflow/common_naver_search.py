@@ -57,6 +57,7 @@ def main(wf):
     wf.add_item(title = 'Search Naver %sdic for \'%s\'' % (lang, word),
                 autocomplete=word,
                 arg=word,
+                quicklookurl='https://dict.naver.com/%skodict/#/search?query=%s' % (lang, word),
                 valid=True)
 
     def wrapper():
@@ -76,6 +77,7 @@ def main(wf):
                             arg=txt,
                             copytext=rtxt,
                             largetext=txt,
+                            quicklookurl='https://dict.naver.com/%skodict/#/search?query=%s' % (lang, txt),
                             valid=True)
 
     wf.send_feedback()

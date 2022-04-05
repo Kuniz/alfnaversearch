@@ -47,6 +47,7 @@ def main(wf):
     wf.add_item(title='Search Naver Endic for \'%s\'' % args,
                 autocomplete=args,
                 arg=args,
+                quicklookurl='https://dict.naver.com/enendict/#/search?query=%s' % args,
                 valid=True)
 
     def wrapper():
@@ -65,6 +66,7 @@ def main(wf):
                         arg=txt,
                         copytext=rtxt,
                         largetext=txt,
+                        quicklookurl='https://dict.naver.com/enendict/#/search?query=%s' % txt,
                         valid=True)
 
     wf.send_feedback()

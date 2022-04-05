@@ -53,6 +53,7 @@ def main(wf):
     wf.add_item(title='Search Naver Hanja for \'%s\'' % args,
                 autocomplete=args,
                 arg=args,
+                quicklookurl='https://hanja.dict.naver.com/#/search?range=all&query=%s' % args,
                 valid=True)
 
     def wrapper():
@@ -73,6 +74,7 @@ def main(wf):
                             arg=txt,
                             copytext=r2txt,
                             largetext=txt,
+                            quicklookurl='https://hanja.dict.naver.com/#/search?range=all&query=%s' % txt,
                             valid=True)
 
     wf.send_feedback()
