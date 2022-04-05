@@ -596,7 +596,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://dedic.naver.com/#search/all/q={query}</string>
+				<string>https://dict.naver.com/dekodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -751,7 +751,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://search.naver.com/search.naver?ie=utf8&amp;sm=stp_hty&amp;where=se&amp;query={query}</string>
+				<string>https://search.naver.com/search.naver?ie=utf8&amp;sm=stp_hty&amp;where=se&amp;query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -1053,7 +1053,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://jpdic.naver.com/search.nhn?range=all&amp;q={query}</string>
+				<string>https://dict.naver.com/jakodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -1159,7 +1159,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://frdic.naver.com/search.nhn?query={query}</string>
+				<string>https://dict.naver.com/frkodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -1407,6 +1407,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://en.dict.naver.com/#/search?range=all&amp;query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>DC0C0607-B94D-4570-AC63-F66900D8201D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1452,25 +1471,6 @@
 			<string>05A74B62-31BF-4237-AEC1-8BC3521CBE82</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>http://endic.naver.com/search.nhn?ie=utf8&amp;query={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>DC0C0607-B94D-4570-AC63-F66900D8201D</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1529,7 +1529,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://krdic.naver.com/search.nhn?kind=all&amp;query={query}</string>
+				<string>https://krdic.naver.com/search.nhn?kind=all&amp;query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -1616,7 +1616,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://cndic.naver.com/search.nhn?ie=utf8&amp;query={query}</string>
+				<string>https://dict.naver.com/zhkodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -1673,7 +1673,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://itdic.naver.com/search.nhn?query={query}</string>
+				<string>https://dict.naver.com/itkodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -2062,7 +2062,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://hanja.naver.com/search?ie=utf8&amp;query={query}</string>
+				<string>https://hanja.dict.naver.com/#/search?range=all&amp;query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -2179,7 +2179,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://spdic.naver.com/search.nhn?query={query}</string>
+				<string>https://dict.naver.com/eskodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -2247,7 +2247,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://vndic.naver.com/search.nhn?query={query}</string>
+				<string>https://dict.naver.com/vikodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -2402,7 +2402,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://rudic.naver.com/search.nhn?query={query}</string>
+				<string>https://dict.naver.com/rukodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -2734,7 +2734,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://iddic.naver.com/search.nhn?query={query}</string>
+				<string>https://dict.naver.com/idkodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -2772,7 +2772,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>http://thdic.naver.com/search.nhn?query={query}</string>
+				<string>https://dict.naver.com/thkodict/#/search?query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -3828,7 +3828,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.2.5</string>
+	<string>0.2.6</string>
 	<key>webaddress</key>
 	<string>https://www.jinukbaek.com/blog/ko/archives/216</string>
 </dict>
