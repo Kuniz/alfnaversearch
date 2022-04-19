@@ -12,12 +12,14 @@
 from __future__ import absolute_import, print_function
 
 import codecs
+import certifi
 import json
 import mimetypes
 import os
 import random
 import re
 import socket
+import ssl
 import string
 import unicodedata
 import urllib
@@ -235,7 +237,9 @@ class Response(object):
 
         # Execute query
         try:
-            self.raw = request3.urlopen(request)
+            context = ssl.create_default_context(cafile=certifi.where())
+#             context = ssl._create_unverified_context()
+            self.raw = request3.urlopen(request, context=context)
         except request3.HTTPError as err:
             self.error = err
             try:

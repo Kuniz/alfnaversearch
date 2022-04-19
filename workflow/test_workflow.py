@@ -1,7 +1,6 @@
 # coding=utf-8
 import unittest
 
-import certifi
 import naver_search
 import naver_shopping
 import krdic_naver_search
