@@ -1529,7 +1529,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://krdic.naver.com/search.nhn?kind=all&amp;query={query}</string>
+				<string>https://ko.dict.naver.com/#/search?range=all&amp;query={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>

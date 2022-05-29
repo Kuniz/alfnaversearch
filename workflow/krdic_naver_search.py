@@ -43,7 +43,7 @@ def main(wf):
     wf.add_item(title='Search Naver Krdic for \'%s\'' % args,
                 autocomplete=args,
                 arg=args,
-                quicklookurl='https://krdic.naver.com/search.nhn?kind=all&query=%s' % args,
+                quicklookurl='https://ko.dict.naver.com/#/search?query=%s' % args,
                 valid=True)
 
     def wrapper():
@@ -61,7 +61,7 @@ def main(wf):
                             arg=txt,
                             copytext=txt,
                             largetext=txt,
-                            quicklookurl='https://krdic.naver.com/search.nhn?kind=all&query=%s' % txt,
+                            quicklookurl='https://ko.dict.naver.com/#/search?query=%s' % txt,
                             valid=True)
 
     wf.send_feedback()
