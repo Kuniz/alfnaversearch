@@ -231,7 +231,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FE3AC2D5-027F-46FF-988C-56015F916AFE</string>
+				<string>A05931C8-0499-4564-B273-EC17BD9DA70B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -903,23 +903,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
+				<key>concurrently</key>
 				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>url</key>
-				<string>https://map.naver.com/v5/search/{query}</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>FE3AC2D5-027F-46FF-988C-56015F916AFE</string>
+			<string>A05931C8-0499-4564-B273-EC17BD9DA70B</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1512,6 +1514,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://en.dict.naver.com/#/search?range=all&amp;query={query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>DC0C0607-B94D-4570-AC63-F66900D8201D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1557,27 +1580,6 @@
 			<string>05A74B62-31BF-4237-AEC1-8BC3521CBE82</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://en.dict.naver.com/#/search?range=all&amp;query={query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>DC0C0607-B94D-4570-AC63-F66900D8201D</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3803,6 +3805,13 @@
 			<key>ypos</key>
 			<real>150</real>
 		</dict>
+		<key>A05931C8-0499-4564-B273-EC17BD9DA70B</key>
+		<dict>
+			<key>xpos</key>
+			<real>2220</real>
+			<key>ypos</key>
+			<real>35</real>
+		</dict>
 		<key>A2A09CFD-D064-4F31-8B61-0630286D7365</key>
 		<dict>
 			<key>xpos</key>
@@ -3991,13 +4000,6 @@
 			<real>1045</real>
 			<key>ypos</key>
 			<real>390</real>
-		</dict>
-		<key>FE3AC2D5-027F-46FF-988C-56015F916AFE</key>
-		<dict>
-			<key>xpos</key>
-			<real>2235</real>
-			<key>ypos</key>
-			<real>35</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
