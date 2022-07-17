@@ -1,5 +1,5 @@
 #!/bin/sh
 
-rm ./Naver\ Search.alfredworkflow
+rm ./NaverSearch.alfredworkflow
 cd workflow
-zip -r ../Naver\ Search.alfredworkflow .
+zip -r ../NaverSearch.alfredworkflow .
