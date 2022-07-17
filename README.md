@@ -1,4 +1,4 @@
-alfnaversearch : Naver Search Workflow for Alfred ![Test](https://github.com/kuniz/alfnaversearch/actions/workflows/test-naver-ac.yml/badge.svg)
+alfnaversearch : Naver Search Workflow for Alfred ![Test](../../actions/workflows/test-naver-ac.yml/badge.svg) ![Release](../../actions/workflows/release.yml/badge.svg)
 ==============
 
 Naver Search Workflow for Alfred
