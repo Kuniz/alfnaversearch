@@ -23,8 +23,8 @@ name: test-naver-ac
 
 on:
   push:
-    branches:
-      - '*'
+    tags:
+      - "v*"
   pull_request:
     types: [opened, reopened]
     paths:

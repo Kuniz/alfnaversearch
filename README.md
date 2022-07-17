@@ -11,7 +11,7 @@ You can use easily to discover Korean contents with the this Alfred workflow.
 Install workflow
 --------------
 
-- [release](release/latest) 페이지의 `NaverSearch.alfredworkflow`를 다운로드 받아서 실행한다.
+- [releases](../../releases/latest) 페이지의 `NaverSearch.alfredworkflow`를 다운로드 받아서 실행한다.
 
 - MacOS 12.3 이상의 경우
   - python3 설치
