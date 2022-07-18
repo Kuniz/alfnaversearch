@@ -49,7 +49,7 @@ def main(wf):
 
     wf.add_item(title=f"Search Naver Map for '{args}'",
                 autocomplete=args,
-                arg=args,
+                arg=f"https://map.naver.com/v5/search/{args}",
                 quicklookurl=f"https://map.naver.com/v5/search/{args}",
                 valid=True)
 
