@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.jinukbaek.alfnaversearch</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>05A74B62-31BF-4237-AEC1-8BC3521CBE82</key>
@@ -440,6 +442,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>8AD94451-2A6A-4873-B95E-E9A88350A9DA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C86F07EE-EF6A-4CAD-AD5D-562FCC5E74F0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1B0D6B30-392C-409C-BD4B-B27BD6835743</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1319,6 +1334,76 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>AFE7AE5A-8A0B-4C63-BA7E-5D7163107DD5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://terms.naver.com/search.naver?query={query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1B0D6B30-392C-409C-BD4B-B27BD6835743</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nt</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Running</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 naver_terms.py "{query}" || /usr/bin/python naver_terms.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Terms for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C86F07EE-EF6A-4CAD-AD5D-562FCC5E74F0</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -3476,6 +3561,13 @@
 			<key>ypos</key>
 			<real>750</real>
 		</dict>
+		<key>1B0D6B30-392C-409C-BD4B-B27BD6835743</key>
+		<dict>
+			<key>xpos</key>
+			<real>2220</real>
+			<key>ypos</key>
+			<real>155</real>
+		</dict>
 		<key>1B83C3ED-14C2-429A-9081-6E816DA31FEB</key>
 		<dict>
 			<key>xpos</key>
@@ -3902,6 +3994,13 @@
 			<real>1445</real>
 			<key>ypos</key>
 			<real>150</real>
+		</dict>
+		<key>C86F07EE-EF6A-4CAD-AD5D-562FCC5E74F0</key>
+		<dict>
+			<key>xpos</key>
+			<real>2035</real>
+			<key>ypos</key>
+			<real>155</real>
 		</dict>
 		<key>C906E725-412D-486E-A134-85EA2D903DA5</key>
 		<dict>

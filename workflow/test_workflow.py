@@ -3,6 +3,7 @@ import unittest
 
 import naver_search
 import naver_shopping
+import naver_terms
 import krdic_naver_search
 import hanja_naver_search
 import endic_naver_search
@@ -18,6 +19,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_shopping(self):
         res = naver_shopping.get_data('한글')
+
+        self.assertTrue(len(res['items']) > 0)
+
+    def test_terms(self):
+        res = naver_terms.get_data('한글')
 
         self.assertTrue(len(res['items']) > 0)
 
