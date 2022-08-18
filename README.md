@@ -23,6 +23,7 @@ Usage
 --------------
 * `na ...`  : Naver Search(일반 네이버 검색)
 * `ns ...`  : Naver Shopping(네이버 쇼핑 검색)
+* `nt ...`  : Naver Terms(네이버 지식백과 검색)
 * `nmap ...` : Naver Map(네이버 지도 검색)
 * `nak ...` : Naver Korean Dictionary (국어 사전)
 * `nae ...` : Naver Korean-English Dictionary (영어 사전)
