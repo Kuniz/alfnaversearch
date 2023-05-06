@@ -18,6 +18,9 @@ Install workflow
     - `brew install python`
     - `xcode-select --install`
 
+- Alfred 4.0 이상 지원
+- Python 2 사용 불가
+
 
 Usage
 --------------
@@ -68,7 +71,7 @@ Usage
 단축키 관련 기능 추가
 
 * Cmd + C : 상세 내용이 클립보드에 복사
-* Cmd + N, C : 자동완성 텍스트가 클립보드로 복사
+* Cmd + N, C 혹은 Cmd + Enter : 자동완성 텍스트가 클립보드로 복사
 * Cmd + Y 혹은 Shift : 검색결과 미리 보기 웹브라우져 출력
 
 Externel Module
