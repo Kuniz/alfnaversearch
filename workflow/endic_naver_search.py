@@ -22,10 +22,7 @@
 
 import sys
 
-if sys.version[0] == "2":
-    from workflow import web, Workflow
-else:
-    from workflow3 import web, Workflow
+from workflow import web, Workflow
 
 def get_dictionary_data(word):
     url = 'https://ac-dict.naver.com/enko/ac'
@@ -46,11 +43,12 @@ def get_dictionary_data(word):
 def main(wf):
     args = wf.args[0]
 
-    wf.add_item(title='Search Naver Endic for \'%s\'' % args,
+    it = wf.add_item(title='Search Naver Endic for \'%s\'' % args,
                 autocomplete=args,
                 arg=args,
                 quicklookurl='https://en.dict.naver.com/#/search?query=%s' % args,
                 valid=True)
+    it.setvar('lang', 'enko')
 
     def wrapper():
         return get_dictionary_data(args)
@@ -63,7 +61,7 @@ def main(wf):
                 txt = item[0][0]
                 rtxt = item[2][0]
 
-                wf.add_item(title=u"%s     %s" % (txt, rtxt),
+                it = wf.add_item(title=u"%s     %s" % (txt, rtxt),
                             subtitle='Search Naver Endic for \'%s\'' % txt,
                             autocomplete=txt,
                             arg=txt,
@@ -71,6 +69,7 @@ def main(wf):
                             largetext=txt,
                             quicklookurl='https://en.dict.naver.com/#/search?query=%s' % txt,
                             valid=True)
+                it.setvar('lang', 'enko')
 
     wf.send_feedback()
 

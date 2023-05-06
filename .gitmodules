@@ -1,4 +1,3 @@
-[submodule "alfred-workflow"]
-	path = alfred-workflow
-	url = https://github.com/deanishe/alfred-workflow.git
-	
+[submodule "alfred-pyworkflow"]
+	path = alfred-pyworkflow
+	url = git@github.com:harrtho/alfred-pyworkflow.git

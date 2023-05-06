@@ -22,15 +22,10 @@
 
 import sys
 
-
-if sys.version[0] == "2":
-    from workflow import web, Workflow
-else:
-    from workflow3 import web, Workflow
-
+from workflow import web, Workflow
 
 def get_dictionary_data(lang, word):
-    url = 'https://ac-dict.naver.com/%sko/ac' % lang
+    url = 'https://ac-dict.naver.com/%s/ac' % lang
     params = dict(q=word,
                   _callback='',
                   q_enc='UTF-8',
@@ -45,19 +40,17 @@ def get_dictionary_data(lang, word):
 
 
 def main(wf):
-    if sys.version[0] == "2":
-        import cgi as html
-    else:
-        import html
+    import html
 
     lang = wf.args[0]
     word = wf.args[1]
 
-    wf.add_item(title = 'Search Naver %sdic for \'%s\'' % (lang, word),
+    it = wf.add_item(title = 'Search Naver %sdic for \'%s\'' % (lang[0:2], word),
                 autocomplete=word,
                 arg=word,
-                quicklookurl='https://dict.naver.com/%skodict/#/search?query=%s' % (lang, word),
+                quicklookurl='https://dict.naver.com/%sdict/#/search?query=%s' % (lang, word),
                 valid=True)
+    it.setvar('lang', lang)
 
     def wrapper():
         return get_dictionary_data(lang, word)
@@ -70,14 +63,15 @@ def main(wf):
                 txt = ltxt[0][0]
                 rtxt = html.escape(ltxt[3][0])
 
-                wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
-                            subtitle = 'Search Naver %sdic for \'%s\'' % (lang, txt),
+                it = wf.add_item(title = u"%s     %s" % (txt, rtxt) ,
+                            subtitle = 'Search Naver %sdic for \'%s\'' % (lang[0:2], txt),
                             autocomplete=txt,
                             arg=txt,
                             copytext=rtxt,
                             largetext=txt,
-                            quicklookurl='https://dict.naver.com/%skodict/#/search?query=%s' % (lang, txt),
+                            quicklookurl='https://dict.naver.com/%sdict/#/search?query=%s' % (lang, txt),
                             valid=True)
+                it.setvar('lang', lang)
 
     wf.send_feedback()
 

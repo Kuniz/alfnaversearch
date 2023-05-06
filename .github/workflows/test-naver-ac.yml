@@ -31,16 +31,6 @@ on:
       - '**.py'
 
 jobs:
-  test-naver-ac-python2:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: 'true'
-      - uses: actions/setup-python@v3
-        with:
-          python-version: '2.x'
-      - run: (cd workflow; python -m unittest test_workflow.MyTestCase; )
   test-naver-ac-python3:
     runs-on: ubuntu-latest
     steps:

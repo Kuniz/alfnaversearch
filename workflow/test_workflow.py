@@ -54,7 +54,7 @@ class MyTestCase(unittest.TestCase):
 
         for lang in langs:
             print('Test of %s\n' % lang)
-            res = common_naver_search.get_dictionary_data(lang, '한글')
+            res = common_naver_search.get_dictionary_data(lang + 'ko', '한글')
 
             self.assertTrue(len(res['items']) > 0)
 

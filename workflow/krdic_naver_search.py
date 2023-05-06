@@ -22,11 +22,7 @@
 
 import sys
 
-
-if sys.version[0] == "2":
-    from workflow import web, Workflow
-else:
-    from workflow3 import web, Workflow
+from workflow import web, Workflow
 
 def get_dictionary_data(word):
     url = 'https://ac-dict.naver.com/koko/ac'
@@ -40,11 +36,12 @@ def get_dictionary_data(word):
 def main(wf):
     args = wf.args[0]
 
-    wf.add_item(title='Search Naver Krdic for \'%s\'' % args,
+    it = wf.add_item(title='Search Naver Krdic for \'%s\'' % args,
                 autocomplete=args,
                 arg=args,
                 quicklookurl='https://ko.dict.naver.com/#/search?query=%s' % args,
                 valid=True)
+    it.setvar('lang', 'koko')
 
     def wrapper():
         return get_dictionary_data(args)
@@ -55,7 +52,7 @@ def main(wf):
         for ltxt in items:
             if len(ltxt) > 0:
                 txt = ltxt[0][0]
-                wf.add_item(title=u"%s" % txt,
+                it = wf.add_item(title=u"%s" % txt,
                             subtitle='Search Naver Krdic for \'%s\'' % txt,
                             autocomplete=txt,
                             arg=txt,
@@ -63,6 +60,7 @@ def main(wf):
                             largetext=txt,
                             quicklookurl='https://ko.dict.naver.com/#/search?query=%s' % txt,
                             valid=True)
+                it.setvar('lang', 'koko')
 
     wf.send_feedback()
 
