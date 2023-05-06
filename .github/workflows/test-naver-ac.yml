@@ -25,6 +25,8 @@ on:
   push:
     tags:
       - "v*"
+    branches:
+      - master
   pull_request:
     types: [opened, reopened]
     paths:
@@ -34,7 +36,10 @@ jobs:
   test-naver-ac-python3:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
       - uses: actions/setup-python@v3
         with:
           python-version: '3.x'
