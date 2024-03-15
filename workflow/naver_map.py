@@ -26,10 +26,10 @@ import sys
 from workflow import web, Workflow
 
 def get_data(word):
-    url = 'https://map.naver.com/v5/api/search'
+    url = 'https://map.naver.com/v5/api/search/instant-search'
     params = dict(query=word,
                   type="all",
-                  displayCount="10",
+                  coords= '37.5664056,126.9778222',
                   lang="ko",
                   caller="pcweb"
                   )
@@ -52,62 +52,56 @@ def main(wf):
         return get_data(args)
 
     res_json = wf.cached_data(f"navmap_{args}", wrapper, max_age=30)
-    res_type = res_json["result"]["type"] # address, place, bus
 
-    if res_type == "address":
-        if res_json["result"][res_type]["subType"] == "jibun-address":
-            res_list = res_json["result"][res_type]["jibunsAddress"]["list"]
-        else:
-            res_list = res_json["result"][res_type]["roadAddress"]["list"]
-        address_key = "koreanAddress"
-        for ltxt in res_list:
-            if len(ltxt) > 0:
-                txt = ltxt[address_key].strip()
-                address = ltxt["name"]
-                wf.add_item(
-                    title=f"Search Naver Map for \'{txt}\'",
-                    subtitle=address,
-                    autocomplete=txt,
-                    arg=f"https://map.naver.com/v5/search/{txt}/{res_type}",
-                    copytext=txt,
-                    largetext=txt,
-                    quicklookurl=f"https://map.naver.com/v5/search/{txt}/{res_type}",
-                    valid=True)
-    elif res_type == "place":
-        res_list = res_json["result"][res_type]["list"]
-        address_key = "roadAddress"
-        for ltxt in res_list:
-            if len(ltxt) > 0:
-                txt = ltxt["name"]
-                address = ltxt[address_key]
-                _id = ltxt["id"]
-                wf.add_item(
-                    title=f"Search Naver Map for \'{txt}\'",
-                    subtitle=address,
-                    autocomplete=txt,
-                    arg=f"https://map.naver.com/v5/search/{txt}/{res_type}/{_id}",
-                    copytext=txt,
-                    largetext=txt,
-                    quicklookurl=f"https://map.naver.com/v5/search/{txt}/{res_type}/{_id}",
-                    valid=True)
-    elif res_type == "bus":
-        res_list = res_json["result"][res_type]["busRoute"]["list"]
-        res_type = "bus-route"
-        address_key = "cityName"
-        for ltxt in res_list:
-            if len(ltxt) > 0:
-                txt = ltxt["name"]
-                address = ltxt[address_key] + "버스 " + txt
-                _id = ltxt["id"]
-                wf.add_item(
-                    title=f"Search Naver Map for \'{txt}\'",
-                    subtitle=address,
-                    autocomplete=txt,
-                    arg=f"https://map.naver.com/v5/search/{txt}/{res_type}/{_id}",
-                    copytext=txt,
-                    largetext=txt,
-                    quicklookurl=f"https://map.naver.com/v5/search/{txt}/{res_type}/{_id}",
-                    valid=True)
+    if len(res_json["address"]) > 0:
+        for ltxt in res_json["address"]:
+            address_key = "fullAddress"
+            txt = ltxt[address_key]
+            address = ltxt["title"]
+            type = ltxt["fullAddress"]
+            wf.add_item(
+                title=f"Search Naver Map for \'{txt}\'",
+                subtitle=address,
+                autocomplete=txt,
+                arg=f"https://map.naver.com/v5/search/{txt}/{type}",
+                copytext=txt,
+                largetext=txt,
+                quicklookurl=f"https://map.naver.com/v5/search/{txt}/{type}",
+                valid=True)
+    elif len(res_json["place"]) > 0:
+        for ltxt in res_json["place"]:
+            address_key = "roadAddress"
+            txt = ltxt["title"]
+            if not ltxt.get(address_key):
+                address_key = "jibunAddress"
+            address = ltxt[address_key]
+            _id = ltxt["id"]
+            type = ltxt["type"]
+            wf.add_item(
+                title=f"Search Naver Map for \'{txt}\'",
+                subtitle=address,
+                autocomplete=txt,
+                arg=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                copytext=txt,
+                largetext=txt,
+                quicklookurl=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                valid=True)
+    elif len(res_json["bus"]) > 0:
+        for ltxt in res_json["bus"]:
+            type = "bus-route"
+            address_key = ltxt["cityName"]
+            txt = ltxt["title"]
+            address = address_key + "버스 " + txt
+            _id = ltxt["id"]
+            wf.add_item(
+                title=f"Search Naver Map for \'{txt}\'",
+                subtitle=address,
+                autocomplete=txt,
+                arg=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                copytext=txt,
+                largetext=txt,
+                quicklookurl=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                valid=True)
 
     wf.send_feedback()
 
