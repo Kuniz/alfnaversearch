@@ -29,11 +29,25 @@ from workflow import web, Workflow
 default_latitude = 37.5665
 default_longitude = 126.9780
 
+def get_ip_location():
+    try:
+        r = web.get('http://ip-api.com/json/')
+        r.raise_for_status()
+        data = r.json()
+        return data["lat"], data["lon"]
+    except Exception as e:
+        # 위치 정보를 가져오는 데 실패할 경우 기본값 반환
+        print(f"위치 정보를 가져오는 데 실패했습니다: {e}")
+        return default_latitude, default_longitude
+
+# # 위치 정보를 가져오고, 실패할 경우 기본값 사용
+latitude, longitude = get_ip_location()
+
 def get_data(word):
     url = 'https://map.naver.com/v5/api/search/instant-search'
     params = dict(query=word,
                   type="all",
-                  coords= f'{default_latitude},{default_longitude}',
+                  coords= f'{latitude},{longitude}',
                   lang="ko",
                   caller="pcweb"
                   )
