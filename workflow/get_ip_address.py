@@ -41,6 +41,7 @@ def get_ip_location():
         return default_latitude, default_longitude
 
 def main(wf):
+    wf.clear_cache()
     latitude, longitude = get_ip_location()
     wf.cache_data('location_data', {'ip_latitude': latitude, 'ip_longitude': longitude})
 

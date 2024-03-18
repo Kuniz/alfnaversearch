@@ -45,6 +45,7 @@ def get_data(word):
 
 def main(wf):
     args = wf.args[0]
+    wf.clear_cache()
 
     wf.add_item(title=f"Search Naver Map for '{args}'",
                 autocomplete=args,
