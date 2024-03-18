@@ -1125,7 +1125,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>ne</string>
+				<string>nae</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1195,7 +1195,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>n</string>
+				<string>na</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1314,7 +1314,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>nm</string>
+				<string>nmap</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1631,7 +1631,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>nmi</string>
+				<string>nmapip</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1729,7 +1729,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nmi</string>
+				<string>nmapip</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
