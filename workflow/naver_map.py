@@ -22,12 +22,12 @@ SOFTWARE.
 """
 
 import sys
+import os
 
 from workflow import web, Workflow
 
-# 기본 위치 정보: 서울 시청의 좌표
-default_latitude = 37.5665
-default_longitude = 126.9780
+default_latitude = os.environ.get('latitude')
+default_longitude = os.environ.get('longitude')
 
 def get_data(word):
     url = 'https://map.naver.com/v5/api/search/instant-search'

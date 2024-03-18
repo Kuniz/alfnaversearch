@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.jinukbaek.alfnaversearch</string>
+	<string>com.inchanS.alfnaversearch</string>
 	<key>category</key>
-	<string>Productivity</string>
+	<string>Internet</string>
 	<key>connections</key>
 	<dict>
 		<key>05A74B62-31BF-4237-AEC1-8BC3521CBE82</key>
@@ -140,6 +140,19 @@
 				<string>216344F8-7531-4536-BE28-606CAF2CD9CB</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1ED036DD-F4FD-400F-A03F-00F5079A6560</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A05931C8-0499-4564-B273-EC17BD9DA70B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -632,6 +645,10 @@
 				<false/>
 			</dict>
 		</array>
+		<key>87025B34-4453-4DFA-84FC-8C015332531E</key>
+		<array/>
+		<key>A05931C8-0499-4564-B273-EC17BD9DA70B</key>
+		<array/>
 		<key>A2A09CFD-D064-4F31-8B61-0630286D7365</key>
 		<array>
 			<dict>
@@ -936,7 +953,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Jinuk Baek</string>
+	<string>inchanS</string>
 	<key>description</key>
 	<string>Naver Search Kit</string>
 	<key>disabled</key>
@@ -1010,7 +1027,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nae</string>
+				<string>nad</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1022,7 +1039,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 endic_naver_search.py "{query}" </string>
+				<string>/usr/bin/env python3 common_naver_search.py deko "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1030,7 +1047,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Endic for {query}</string>
+				<string>Search Naver Dedic for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1039,7 +1056,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>7381EFB0-D4A3-4994-A6B1-99D0B508233D</string>
+			<string>E0DD7A1D-529B-4804-A314-5309D341E4FB</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1106,9 +1123,9 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>102</integer>
 				<key>keyword</key>
-				<string>na</string>
+				<string>ne</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1118,9 +1135,9 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Running</string>
+				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 naver_search.py "{query}" </string>
+				<string>/usr/bin/env python3 endic_naver_search.py "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1128,7 +1145,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver for {query}</string>
+				<string>Search Naver Endic for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1137,7 +1154,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>ED7ADA66-8BF2-4877-A51A-71B5F004E305</string>
+			<string>7381EFB0-D4A3-4994-A6B1-99D0B508233D</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1176,9 +1193,9 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>68</integer>
 				<key>keyword</key>
-				<string>nad</string>
+				<string>n</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1188,9 +1205,9 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Loading...</string>
+				<string>Running</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py deko "{query}" </string>
+				<string>/usr/bin/env python3 naver_search.py "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1198,7 +1215,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Dedic for {query}</string>
+				<string>Search Naver for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1207,7 +1224,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>E0DD7A1D-529B-4804-A314-5309D341E4FB</string>
+			<string>ED7ADA66-8BF2-4877-A51A-71B5F004E305</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1284,29 +1301,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A05931C8-0499-4564-B273-EC17BD9DA70B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1320,7 +1314,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>nmap</string>
+				<string>nm</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1332,7 +1326,7 @@
 				<key>runningsubtext</key>
 				<string>Running</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 naver_map.py "{query}" </string>
+				<string>/usr/bin/env python3 naver_map.py "{query}" -{var:latitude} -{var:longitude}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1352,6 +1346,29 @@
 			<string>58425307-D5A4-469E-83F8-E75EAAB98FBF</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A05931C8-0499-4564-B273-EC17BD9DA70B</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1418,7 +1435,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nauk</string>
+				<string>naf</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1430,7 +1447,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py ukko "{query}" </string>
+				<string>/usr/bin/env python3 common_naver_search.py frko "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1438,7 +1455,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver ukraine for {query}</string>
+				<string>Search Naver Frdic for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1447,56 +1464,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>4B149B1B-D05E-43DD-9036-17FD11D2D4AF</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nasq</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py sqko "{query}" </string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver Albanian for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>6E9A95B5-2F00-46D4-9393-B396023CD829</string>
+			<string>AFE7AE5A-8A0B-4C63-BA7E-5D7163107DD5</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1565,7 +1533,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>naf</string>
+				<string>nasq</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1577,7 +1545,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py frko "{query}" </string>
+				<string>/usr/bin/env python3 common_naver_search.py sqko "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1585,7 +1553,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Frdic for {query}</string>
+				<string>Search Naver Albanian for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1594,30 +1562,9 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>AFE7AE5A-8A0B-4C63-BA7E-5D7163107DD5</string>
+			<string>6E9A95B5-2F00-46D4-9393-B396023CD829</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://terms.naver.com/search.naver?query={query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>1B0D6B30-392C-409C-BD4B-B27BD6835743</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1635,7 +1582,56 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nt</string>
+				<string>nauk</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 common_naver_search.py ukko "{query}" </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver ukraine for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4B149B1B-D05E-43DD-9036-17FD11D2D4AF</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>nmi</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1647,7 +1643,7 @@
 				<key>runningsubtext</key>
 				<string>Running</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 naver_terms.py "{query}" </string>
+				<string>/usr/bin/env python3 naver_map_with_ip.py "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1655,7 +1651,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Terms for {query}</string>
+				<string>Search Naver Map in IP location for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1664,7 +1660,105 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>C86F07EE-EF6A-4CAD-AD5D-562FCC5E74F0</string>
+			<string>1ED036DD-F4FD-400F-A03F-00F5079A6560</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nak</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 krdic_naver_search.py "{query}" </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Korean for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2944DDB4-6E49-40D2-A3D8-FF27A0C636F3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nmi</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Running...</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 get_ip_address.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>IP address로부터 위치정보 가져오기</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>87025B34-4453-4DFA-84FC-8C015332531E</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1880,11 +1974,11 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nak</string>
+				<string>nala</string>
 				<key>queuedelaycustom</key>
-				<integer>3</integer>
+				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -1892,7 +1986,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 krdic_naver_search.py "{query}" </string>
+				<string>/usr/bin/env python3 common_naver_search.py lako "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1900,7 +1994,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Korean for {query}</string>
+				<string>Search Naver Latin for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1909,126 +2003,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>2944DDB4-6E49-40D2-A3D8-FF27A0C636F3</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://search.shopping.naver.com/search/all?query={query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>74EA9379-B5A0-4226-BE3E-A5078579509A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>ns</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Running</string>
-				<key>script</key>
-				<string>/usr/bin/env python3 naver_shopping.py "{query}" </string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>4CE6D24F-8B0E-4DEE-B0B3-22CDA12434C8</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nai</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py itko "{query}" </string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver Italian for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>30875AA6-9F14-4A9D-B5A9-AD3B9401027D</string>
+			<string>1DAA96FB-4015-411A-8962-531AED3DD057</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -2195,11 +2170,11 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nala</string>
+				<string>nai</string>
 				<key>queuedelaycustom</key>
-				<integer>1</integer>
+				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<false/>
+				<true/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -2207,7 +2182,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py lako "{query}" </string>
+				<string>/usr/bin/env python3 common_naver_search.py itko "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2215,7 +2190,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Latin for {query}</string>
+				<string>Search Naver Italian for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -2224,7 +2199,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>1DAA96FB-4015-411A-8962-531AED3DD057</string>
+			<string>30875AA6-9F14-4A9D-B5A9-AD3B9401027D</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -2244,7 +2219,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nael</string>
+				<string>nt</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -2254,9 +2229,9 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Loading...</string>
+				<string>Running</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py elko "{query}" </string>
+				<string>/usr/bin/env python3 naver_terms.py "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2264,7 +2239,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Greek for {query}</string>
+				<string>Search Naver Terms for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -2273,9 +2248,30 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>B9672078-14EF-4548-BD23-D94EB66D31AF</string>
+			<string>C86F07EE-EF6A-4CAD-AD5D-562FCC5E74F0</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://terms.naver.com/search.naver?query={query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1B0D6B30-392C-409C-BD4B-B27BD6835743</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2323,55 +2319,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>67767187-B62A-4B5F-8EEB-B12013A65641</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nahr</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py hrko "{query}" </string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver Croatian for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>A2A09CFD-D064-4F31-8B61-0630286D7365</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -2489,7 +2436,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nat</string>
+				<string>nahr</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -2501,7 +2448,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py thko "{query}" </string>
+				<string>/usr/bin/env python3 common_naver_search.py hrko "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2509,7 +2456,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Thai for {query}</string>
+				<string>Search Naver Croatian for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -2518,7 +2465,175 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>E8953233-9708-4079-BF77-6135BA0AC3EF</string>
+			<string>A2A09CFD-D064-4F31-8B61-0630286D7365</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nael</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 common_naver_search.py elko "{query}" </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Greek for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B9672078-14EF-4548-BD23-D94EB66D31AF</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://search.shopping.naver.com/search/all?query={query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>74EA9379-B5A0-4226-BE3E-A5078579509A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ns</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Running</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 naver_shopping.py "{query}" </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4CE6D24F-8B0E-4DEE-B0B3-22CDA12434C8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>nar</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 common_naver_search.py ruko "{query}" </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Russian for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C906E725-412D-486E-A134-85EA2D903DA5</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -2636,7 +2751,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>nar</string>
+				<string>nat</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -2648,7 +2763,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py ruko "{query}" </string>
+				<string>/usr/bin/env python3 common_naver_search.py thko "{query}" </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2656,7 +2771,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Search Naver Russian for {query}</string>
+				<string>Search Naver Thai for {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -2665,7 +2780,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>C906E725-412D-486E-A134-85EA2D903DA5</string>
+			<string>E8953233-9708-4079-BF77-6135BA0AC3EF</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -2804,6 +2919,55 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
+				<string>nau</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 common_naver_search.py uzko "{query}" </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Uzbek for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7EAD80AF-0D87-4FBD-AAAD-5A4BD8237EEC</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
 				<string>napt</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
@@ -2889,55 +3053,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nau</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py uzko "{query}" </string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver Uzbek for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>7EAD80AF-0D87-4FBD-AAAD-5A4BD8237EEC</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -2951,55 +3066,6 @@
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>216344F8-7531-4536-BE28-606CAF2CD9CB</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>nanl</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>/usr/bin/env python3 common_naver_search.py nlko "{query}" </string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search Naver Nederland for {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>6C9DD7FC-9BE6-4D47-9675-207A56A9B896</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -3117,6 +3183,55 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
+				<string>nanl</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>/usr/bin/env python3 common_naver_search.py nlko "{query}" </string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Naver Nederland for {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6C9DD7FC-9BE6-4D47-9675-207A56A9B896</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
 				<string>namn</string>
 				<key>queuedelaycustom</key>
 				<integer>1</integer>
@@ -3152,7 +3267,16 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Autocomplete Workflow for Naver Services</string>
+	<string>Autocomplete Workflow for Naver Services
+
+fork repository : https://github.com/Kuniz/alfnaversearch v0.3.0
+
+IMPORTANT!!
+naver map 검색시, 워크플로우 설정에서 위도와 경도를 현재 사용자의 위치로 정확히 설정하시면 더욱 정확한 근처 지도 정보를 얻을 수 있습니다.
+입력하지 않을 시, 기본값으로 서울시청의 주소값이 사용됩니다.
+
+Alfred 호출창에서 nmi를 입력하면 IP address로부터 유사 위치를 가져올 수 있습니다.
+nmi 이후 주소 검색시 IP address로부터 가져온 주소를 기반으로 근처 지도 정보를 사용합니다.</string>
 	<key>uidata</key>
 	<dict>
 		<key>05A74B62-31BF-4237-AEC1-8BC3521CBE82</key>
@@ -3186,9 +3310,9 @@
 		<key>1B0D6B30-392C-409C-BD4B-B27BD6835743</key>
 		<dict>
 			<key>xpos</key>
-			<real>1990</real>
+			<real>1985</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>400</real>
 		</dict>
 		<key>1B83C3ED-14C2-429A-9081-6E816DA31FEB</key>
 		<dict>
@@ -3203,6 +3327,13 @@
 			<real>1265</real>
 			<key>ypos</key>
 			<real>375</real>
+		</dict>
+		<key>1ED036DD-F4FD-400F-A03F-00F5079A6560</key>
+		<dict>
+			<key>xpos</key>
+			<real>1805</real>
+			<key>ypos</key>
+			<real>150</real>
 		</dict>
 		<key>216344F8-7531-4536-BE28-606CAF2CD9CB</key>
 		<dict>
@@ -3265,7 +3396,7 @@
 			<key>xpos</key>
 			<real>1805</real>
 			<key>ypos</key>
-			<real>300</real>
+			<real>540</real>
 		</dict>
 		<key>4D057C63-9417-40FC-8236-01FAE5092837</key>
 		<dict>
@@ -3340,9 +3471,9 @@
 		<key>74EA9379-B5A0-4226-BE3E-A5078579509A</key>
 		<dict>
 			<key>xpos</key>
-			<real>1995</real>
+			<real>1990</real>
 			<key>ypos</key>
-			<real>300</real>
+			<real>540</real>
 		</dict>
 		<key>79B417DB-5D88-49FE-B9E1-62893333EAAC</key>
 		<dict>
@@ -3371,6 +3502,13 @@
 			<real>650</real>
 			<key>ypos</key>
 			<real>730</real>
+		</dict>
+		<key>87025B34-4453-4DFA-84FC-8C015332531E</key>
+		<dict>
+			<key>xpos</key>
+			<real>1805</real>
+			<key>ypos</key>
+			<real>260</real>
 		</dict>
 		<key>A05931C8-0499-4564-B273-EC17BD9DA70B</key>
 		<dict>
@@ -3433,7 +3571,7 @@
 			<key>xpos</key>
 			<real>1805</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>400</real>
 		</dict>
 		<key>C906E725-412D-486E-A134-85EA2D903DA5</key>
 		<dict>
@@ -3500,12 +3638,55 @@
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>37.5665</string>
+				<key>placeholder</key>
+				<string>37.5665</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>위도 설정(없으면 서울시청을 기준으로 합니다.)</string>
+			<key>label</key>
+			<string>사용자 위치 - 위도</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>latitude</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>126.9780</string>
+				<key>placeholder</key>
+				<string>126.9780</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>경도 설정(없으면 서울시청을 기준으로 합니다.)</string>
+			<key>label</key>
+			<string>사용자 위치 - 경도</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>longitude</string>
+		</dict>
+	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>{{VERSION_INFO}}</string>
+	<string>0.0.3</string>
 	<key>webaddress</key>
-	<string>https://github.com/Kuniz/alfnaversearch</string>
+	<string>https://github.com/inchanS/alfnaversearch</string>
 </dict>
 </plist>

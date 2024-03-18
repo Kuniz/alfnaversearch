@@ -22,28 +22,18 @@ SOFTWARE.
 """
 
 import sys
-
 from workflow import web, Workflow
 
-# 기본 위치 정보: 서울 시청의 좌표
-default_latitude = 37.5665
-default_longitude = 126.9780
-
-def get_ip_location():
-    try:
-        r = web.get('http://ip-api.com/json/')
-        r.raise_for_status()
-        data = r.json()
-        return data["lat"], data["lon"]
-    except Exception as e:
-        # 위치 정보를 가져오는 데 실패할 경우 기본값 반환
-        print(f"위치 정보를 가져오는 데 실패했습니다: {e}")
-        return default_latitude, default_longitude
-
-# # 위치 정보를 가져오고, 실패할 경우 기본값 사용
-latitude, longitude = get_ip_location()
-
 def get_data(word):
+    location_data = wf.cached_data('location_data', max_age=0)
+
+    if location_data is None:
+        print('위치 정보를 불러올 수 없습니다.')
+        sys.exit(1)
+
+    latitude = location_data['ip_latitude']
+    longitude = location_data['ip_longitude']
+
     url = 'https://map.naver.com/v5/api/search/instant-search'
     params = dict(query=word,
                   type="all",
