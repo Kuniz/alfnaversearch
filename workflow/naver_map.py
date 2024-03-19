@@ -22,18 +22,21 @@ SOFTWARE.
 """
 
 import sys
-import os
-
 from workflow import web, Workflow
 
-default_latitude = os.environ.get('latitude')
-default_longitude = os.environ.get('longitude')
+def get_ip_location():
+    r = web.get('https://map.naver.com/p/api/location')
+    r.raise_for_status()
+    data = r.json()
+    return data["lngLat"]
 
 def get_data(word):
-    url = 'https://map.naver.com/v5/api/search/instant-search'
+    locate = wf.cached_data('location_data', get_ip_location, max_age=30)
+
+    url = 'https://map.naver.com/p/api/search/instant-search'
     params = dict(query=word,
                   type="all",
-                  coords= f'{default_latitude},{default_longitude}',
+                  coords= f"{locate['lat']},{locate['lng']}",
                   lang="ko",
                   caller="pcweb"
                   )
@@ -42,15 +45,13 @@ def get_data(word):
     r.raise_for_status()
     return r.json()
 
-
 def main(wf):
     args = wf.args[0]
-    wf.clear_cache()
 
     wf.add_item(title=f"Search Naver Map for '{args}'",
                 autocomplete=args,
-                arg=f"https://map.naver.com/v5/search/{args}",
-                quicklookurl=f"https://map.naver.com/v5/search/{args}",
+                arg=f"https://map.naver.com/p/search/{args}",
+                quicklookurl=f"https://map.naver.com/p/search/{args}",
                 valid=True)
 
     def wrapper():
@@ -68,10 +69,10 @@ def main(wf):
                 title=f"Search Naver Map for \'{txt}\'",
                 subtitle=address,
                 autocomplete=txt,
-                arg=f"https://map.naver.com/v5/search/{txt}/{type}",
+                arg=f"https://map.naver.com/p/search/{txt}/{type}",
                 copytext=txt,
                 largetext=txt,
-                quicklookurl=f"https://map.naver.com/v5/search/{txt}/{type}",
+                quicklookurl=f"https://map.naver.com/p/search/{txt}/{type}",
                 valid=True)
     elif len(res_json["place"]) > 0:
         for ltxt in res_json["place"]:
@@ -86,10 +87,10 @@ def main(wf):
                 title=f"Search Naver Map for \'{txt}\'",
                 subtitle=address,
                 autocomplete=txt,
-                arg=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                arg=f"https://map.naver.com/p/search/{txt}/{type}/{_id}",
                 copytext=txt,
                 largetext=txt,
-                quicklookurl=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                quicklookurl=f"https://map.naver.com/p/search/{txt}/{type}/{_id}",
                 valid=True)
     elif len(res_json["bus"]) > 0:
         for ltxt in res_json["bus"]:
@@ -102,10 +103,10 @@ def main(wf):
                 title=f"Search Naver Map for \'{txt}\'",
                 subtitle=address,
                 autocomplete=txt,
-                arg=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                arg=f"https://map.naver.com/p/search/{txt}/{type}/{_id}",
                 copytext=txt,
                 largetext=txt,
-                quicklookurl=f"https://map.naver.com/v5/search/{txt}/{type}/{_id}",
+                quicklookurl=f"https://map.naver.com/p/search/{txt}/{type}/{_id}",
                 valid=True)
 
     wf.send_feedback()
