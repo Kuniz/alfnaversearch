@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.jinukbaek.alfnaversearch</string>
+	<key>category</key>
+ 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>05A74B62-31BF-4237-AEC1-8BC3521CBE82</key>
@@ -3502,7 +3504,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.3.0</string>
+	<string>{{VERSION_INFO}}</string>
 	<key>webaddress</key>
 	<string>https://github.com/Kuniz/alfnaversearch</string>
 </dict>
