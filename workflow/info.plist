@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>com.jinukbaek.alfnaversearch</string>
 	<key>category</key>
- 	<string>Productivity</string>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>05A74B62-31BF-4237-AEC1-8BC3521CBE82</key>
