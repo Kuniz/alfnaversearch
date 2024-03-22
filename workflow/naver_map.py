@@ -64,15 +64,17 @@ def main(wf):
             address_key = "fullAddress"
             txt = ltxt[address_key]
             address = ltxt["title"]
-            type = ltxt["fullAddress"]
+            type = "address"
+            x = ltxt["x"]
+            y = ltxt["y"]
             wf.add_item(
                 title=f"Search Naver Map for \'{txt}\'",
                 subtitle=address,
                 autocomplete=txt,
-                arg=f"https://map.naver.com/p/search/{txt}/{type}",
-                copytext=txt,
+                arg=f"https://map.naver.com/p/entry/{type}/{y},{x},{txt}",
+                copytext=ltxt["fullAddress"],
                 largetext=txt,
-                quicklookurl=f"https://map.naver.com/p/search/{txt}/{type}",
+                quicklookurl=f"https://map.naver.com/p/entry/{type}/{y},{x},{txt}",
                 valid=True)
     elif len(res_json["place"]) > 0:
         for ltxt in res_json["place"]:
