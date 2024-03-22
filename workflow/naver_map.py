@@ -30,9 +30,7 @@ def get_ip_location():
     data = r.json()
     return data["lngLat"]
 
-def get_data(word):
-    locate = wf.cached_data('location_data', get_ip_location, max_age=30)
-
+def get_data(word, locate):
     url = 'https://map.naver.com/p/api/search/instant-search'
     params = dict(query=word,
                   type="all",
@@ -54,8 +52,9 @@ def main(wf):
                 quicklookurl=f"https://map.naver.com/p/search/{args}",
                 valid=True)
 
+    locate = wf.cached_data('location_data', get_ip_location, max_age=30)
     def wrapper():
-        return get_data(args)
+        return get_data(args, locate)
 
     res_json = wf.cached_data(f"navmap_{args}", wrapper, max_age=30)
 
