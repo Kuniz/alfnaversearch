@@ -43,7 +43,7 @@ def get_data(word):
     headers = {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15"}
     r = web.get(url, params, headers=headers)
     r.raise_for_status()
-    return r.json()
+    return r.json().get("all")
 
 def main(wf):
     args = wf.args[0]
@@ -59,8 +59,9 @@ def main(wf):
 
     res_json = wf.cached_data(f"navmap_{args}", wrapper, max_age=30)
 
-    if len(res_json["address"]) > 0:
-        for ltxt in res_json["address"]:
+    for item in res_json:
+        if item.get("address"):
+            ltxt = item["address"]
             address_key = "fullAddress"
             txt = ltxt[address_key]
             address = ltxt["title"]
@@ -76,8 +77,8 @@ def main(wf):
                 largetext=txt,
                 quicklookurl=f"https://map.naver.com/p/entry/{type}/{y},{x},{txt}",
                 valid=True)
-    elif len(res_json["place"]) > 0:
-        for ltxt in res_json["place"]:
+        elif item.get("place"):
+            ltxt = item["place"]
             address_key = "roadAddress"
             txt = ltxt["title"]
             if not ltxt.get(address_key):
@@ -94,8 +95,8 @@ def main(wf):
                 largetext=txt,
                 quicklookurl=f"https://map.naver.com/p/search/{txt}/{type}/{_id}",
                 valid=True)
-    elif len(res_json["bus"]) > 0:
-        for ltxt in res_json["bus"]:
+        elif item.get("bus"):
+            ltxt = item["bus"]
             type = "bus-route"
             address_key = ltxt["cityName"]
             txt = ltxt["title"]
