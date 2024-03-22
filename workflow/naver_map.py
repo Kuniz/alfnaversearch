@@ -72,7 +72,7 @@ def main(wf):
                 subtitle=address,
                 autocomplete=txt,
                 arg=f"https://map.naver.com/p/entry/{type}/{y},{x},{txt}",
-                copytext=ltxt["fullAddress"],
+                copytext=txt,
                 largetext=txt,
                 quicklookurl=f"https://map.naver.com/p/entry/{type}/{y},{x},{txt}",
                 valid=True)
