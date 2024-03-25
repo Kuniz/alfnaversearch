@@ -9,6 +9,7 @@ import hanja_naver_search
 import endic_naver_search
 import enendic_naver_search
 import common_naver_search
+import naver_map
 
 
 class MyTestCase(unittest.TestCase):
@@ -57,6 +58,12 @@ class MyTestCase(unittest.TestCase):
             res = common_naver_search.get_dictionary_data(lang + 'ko', '한글')
 
             self.assertTrue(len(res['items']) > 0)
+
+    def test_naver_map(self):
+        locate = {'lat': '37.5665', 'lng': '126.9780'}
+        res = naver_map.get_data('서울', locate)
+
+        self.assertTrue((len(res) > 0))
 
 
 if __name__ == '__main__':
