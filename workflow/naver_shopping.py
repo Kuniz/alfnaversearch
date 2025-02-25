@@ -26,18 +26,11 @@ import sys
 from workflow import web, Workflow
 
 def get_data(word):
-    url = 'https://ac.shopping.naver.com/ac'
+    url = 'https://shopping.naver.com/api/modules/gnb/auto-complete'
 
     params = dict(
-        frm='shopping',
-        q_enc='UTF-8',
-        st=111111,
-        r_lt=111111,
-        r_format='json',
-        r_enc='UTF-8',
-        r_unicode=0,
-        t_koreng=1,
-        q=word
+        personalizeYn='n',
+        keyword=word
     )
 
     r = web.get(url, params)
@@ -59,9 +52,9 @@ def main(wf):
 
     res_json = wf.cached_data('navs_%s' % args, wrapper, max_age=30)
 
-    for ltxt in res_json['items'][1]:
+    for ltxt in res_json['result']['keywordList']:
         if len(ltxt) > 0:
-            txt = ltxt[0][0]
+            txt = ltxt['keywordName']
             wf.add_item(
                 title=txt,
                 autocomplete=txt,

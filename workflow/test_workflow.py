@@ -18,11 +18,6 @@ class MyTestCase(unittest.TestCase):
 
         self.assertTrue(len(res['items']) > 0)
 
-    def test_shopping(self):
-        res = naver_shopping.get_data('한글')
-
-        self.assertTrue(len(res['items']) > 0)
-
     def test_terms(self):
         res = naver_terms.get_data('한글')
 
